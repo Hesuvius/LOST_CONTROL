@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cuvvrlxqe2rje"]
+[gd_scene load_steps=6 format=3 uid="uid://cuvvrlxqe2rje"]
 
 [ext_resource type="Script" path="res://start_menu/menu.gd" id="1_tcir3"]
 [ext_resource type="Texture2D" uid="uid://di0onkjgimgb3" path="res://graphics/TV_dark_room.png" id="2_pdpaf"]
 [ext_resource type="Texture2D" uid="uid://bpeywtt20u7uw" path="res://graphics/placeholders/godot_test.jpg" id="3_7t7ne"]
 [ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="3_oagbh"]
+
+[sub_resource type="Theme" id="Theme_y0f10"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_tcir3")
@@ -18,10 +20,10 @@ texture = ExtResource("2_pdpaf")
 [node name="buttons" type="Node2D" parent="main_menu_graphics"]
 
 [node name="exit_btn" type="Button" parent="main_menu_graphics/buttons"]
-offset_left = 966.0
-offset_top = 882.0
-offset_right = 1234.0
-offset_bottom = 949.0
+offset_left = 961.0
+offset_top = 884.0
+offset_right = 1229.0
+offset_bottom = 951.0
 tooltip_text = "Bye"
 theme_override_font_sizes/font_size = 40
 text = "exit"
@@ -36,24 +38,48 @@ theme_override_font_sizes/font_size = 40
 text = "start"
 
 [node name="next_btn" type="Button" parent="main_menu_graphics/buttons"]
-visible = false
-offset_left = 1611.0
-offset_top = 987.0
-offset_right = 1879.0
-offset_bottom = 1054.0
+z_index = 5
+offset_left = 1530.0
+offset_top = 939.0
+offset_right = 1798.0
+offset_bottom = 1006.0
+theme = SubResource("Theme_y0f10")
 text = "next"
 
 [node name="story_slides" type="Node2D" parent="."]
 
 [node name="story1" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
 visible = false
+z_index = 3
 position = Vector2(937, 537)
 scale = Vector2(1.65, 1.65)
 texture = ExtResource("3_7t7ne")
 
 [node name="story2" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
 visible = false
-position = Vector2(1215.5, 653.75)
+z_index = 3
+position = Vector2(554, 406)
+scale = Vector2(2.42875, 2.10917)
+texture = ExtResource("3_7t7ne")
+
+[node name="story3" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
+visible = false
+z_index = 3
+position = Vector2(737.25, 497.375)
+scale = Vector2(1.92937, 1.86792)
+texture = ExtResource("3_7t7ne")
+
+[node name="story4" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
+visible = false
+z_index = 3
+position = Vector2(816.75, 645.875)
+scale = Vector2(2.06312, 1.77958)
+texture = ExtResource("3_7t7ne")
+
+[node name="story5" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
+visible = false
+z_index = 3
+position = Vector2(668, 537)
 scale = Vector2(2.42875, 2.10917)
 texture = ExtResource("3_7t7ne")
 

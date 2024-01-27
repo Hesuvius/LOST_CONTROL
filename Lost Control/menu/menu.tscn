@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://menu/menu.gd" id="1_tcir3"]
 [ext_resource type="Texture2D" uid="uid://di0onkjgimgb3" path="res://graphics/TV_dark_room.png" id="2_pdpaf"]
 [ext_resource type="Texture2D" uid="uid://bpeywtt20u7uw" path="res://graphics/placeholders/godot_test.jpg" id="3_7t7ne"]
-[ext_resource type="AudioStream" uid="uid://cw5xmkax21d5" path="res://sound and music/lost_remote_hidas.mp3" id="3_372db"]
+[ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="3_oagbh"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_tcir3")
@@ -62,7 +62,7 @@ texture = ExtResource("3_7t7ne")
 [node name="fail_slides" type="Node2D" parent="."]
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_372db")
+stream = ExtResource("3_oagbh")
 volume_db = -19.27
 autoplay = true
 

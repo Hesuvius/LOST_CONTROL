@@ -1,54 +1,30 @@
 extends CharacterBody2D
 
-@onready var collision_polygon = $CollisionPolygon2D
+@onready var collision_shape = $CollisionShape2D
+@onready var arm = $Arm
 
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
-func clamp_position():
+func update_position(relative_movement):
 	var viewport_rect = get_viewport_rect()
 	var bottom_right = viewport_rect.end
 
-	var polygon_measurements = calculate_polygon_measurements(collision_polygon.polygon)
+	var radius = collision_shape.shape.radius
+	var scale = collision_shape.scale.x
+	
+	var min = (radius * scale) / 2
+	var max_x = bottom_right.x - (radius * scale)
+	var max_y = bottom_right.y - (radius * scale)
 
-	var min_x = (polygon_measurements[0].x * -1) * collision_polygon.scale.x
-	var min_y = (polygon_measurements[0].y * -1) * collision_polygon.scale.y
-	var max_x = bottom_right.x - (polygon_measurements[1].x * collision_polygon.scale.x)
-	var max_y = bottom_right.y - (polygon_measurements[1].y * collision_polygon.scale.y)
-
-	var current_pos = position
-
-	position.x = clamp(current_pos.x, min_x, max_x)
-	position.y = clamp(current_pos.y, min_y, max_y)
-
-
-func calculate_polygon_measurements(polygon_points):
-	var x_coords = []
-	var y_coords = []
-	for point in polygon_points:
-		x_coords.append(point.x)
-		y_coords.append(point.y)
-
-	var min_x = INF
-	var max_x = -INF
-	var min_y = INF
-	var max_y = -INF
-
-	for x in x_coords:
-		if x < min_x:
-			min_x = x
-		if x > max_x:
-			max_x = x
-
-	for y in y_coords:
-		if y < min_y:
-			min_y = y
-		if y > max_y:
-			max_y = y
-
-	return [Vector2(min_x, min_y), Vector2(max_x, max_y)]
+	var old_x = position.x
+	position.x = clamp(position.x + relative_movement.x, min, max_x)
+	var old_y = position.y
+	position.y = clamp(position.y + relative_movement.y, min, max_y)
+	var old_point = arm.points[0]
+	arm.points[0] = Vector2(old_point.x + old_x - position.x, old_point.y + old_y - position.y)
 
 
 func _input(event):
@@ -60,8 +36,5 @@ func _input(event):
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if event is InputEventMouseMotion:
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			var relative_movement = event.relative
-			position.x = position.x + relative_movement.x
-			position.y = position.y + relative_movement.y
-			clamp_position()
+			update_position(event.relative)
 	pass

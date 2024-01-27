@@ -98,6 +98,7 @@ metadata/_edit_lock_ = true
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_r6tol")
+volume_db = -21.081
 autoplay = true
 
 [node name="Ajastin" type="Timer" parent="."]

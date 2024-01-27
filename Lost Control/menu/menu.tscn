@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://menu/menu.gd" id="1_tcir3"]
 [ext_resource type="Texture2D" uid="uid://di0onkjgimgb3" path="res://graphics/TV_dark_room.png" id="2_pdpaf"]
-[ext_resource type="AudioStream" uid="uid://bpalnqom5i0cn" path="res://sound and music/lost_remote_02.mp3" id="3_42gif"]
+[ext_resource type="AudioStream" uid="uid://cw5xmkax21d5" path="res://sound and music/lost_remote_hidas.mp3" id="3_372db"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_tcir3")
@@ -48,7 +48,9 @@ text = "next
 [node name="fail_slides" type="Node2D" parent="."]
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_42gif")
+stream = ExtResource("3_372db")
+volume_db = -19.27
+autoplay = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 891.0

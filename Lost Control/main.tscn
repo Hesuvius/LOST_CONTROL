@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cae4ax4c544ox"]
+[gd_scene load_steps=40 format=3 uid="uid://cae4ax4c544ox"]
 
 [ext_resource type="Script" path="res://item.gd" id="1_cqr2q"]
 [ext_resource type="Script" path="res://main.gd" id="1_g2hj1"]
@@ -21,12 +21,27 @@
 [ext_resource type="Texture2D" uid="uid://ckhwqgxutw6q3" path="res://graphics/roskaa/tumppi_2.png" id="10_t3nv1"]
 [ext_resource type="Texture2D" uid="uid://d1b8nt5w71qlg" path="res://graphics/roskaa/tumppi_3.png" id="11_1ctf4"]
 [ext_resource type="Texture2D" uid="uid://ceax2bh0toor0" path="res://graphics/whole_arm_closed.png" id="11_x8hco"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mt1b1"]
-size = Vector2(9.69529, 19.2521)
+[ext_resource type="Texture2D" uid="uid://cey354enbwxek" path="res://graphics/roskaa/pankki.png" id="14_ussgy"]
+[ext_resource type="Texture2D" uid="uid://dcfrud2xbui7l" path="res://graphics/roskaa/motto.png" id="15_585hn"]
+[ext_resource type="Texture2D" uid="uid://dvyikgm1yt3ao" path="res://graphics/roskaa/morebread.png" id="16_vki24"]
+[ext_resource type="Texture2D" uid="uid://bfgrnj6cbvung" path="res://graphics/roskaa/kortti.png" id="17_j6tbs"]
+[ext_resource type="Texture2D" uid="uid://b6j30r38gcsf4" path="res://graphics/roskaa/kokis.png" id="18_2ld36"]
+[ext_resource type="Texture2D" uid="uid://cmustu1fxobip" path="res://graphics/roskaa/pits.png" id="19_8emjl"]
+[ext_resource type="Texture2D" uid="uid://cj1njny45g8sv" path="res://graphics/roskaa/lippu.png" id="20_ddhtu"]
+[ext_resource type="Texture2D" uid="uid://bq3wyrlh5cbn8" path="res://graphics/roskaa/lappu.png" id="21_2i4bh"]
+[ext_resource type="Texture2D" uid="uid://bcfd6ntcvxrco" path="res://graphics/roskaa/mikrolitti.png" id="22_qus32"]
+[ext_resource type="Texture2D" uid="uid://evg05gwxqisd" path="res://graphics/roskaa/luettelo.png" id="23_bg0yv"]
+[ext_resource type="Texture2D" uid="uid://dqpvq5ajr0u3j" path="res://graphics/roskaa/kana.png" id="24_fra60"]
+[ext_resource type="Texture2D" uid="uid://cduv3tukcdc1w" path="res://graphics/roskaa/drpepa.png" id="25_ls7i4"]
+[ext_resource type="Texture2D" uid="uid://cymota14uso2" path="res://graphics/roskaa/bansku.png" id="26_qdr7x"]
+[ext_resource type="Texture2D" uid="uid://cn7165vvh000k" path="res://graphics/roskaa/kirje.png" id="27_i3ibl"]
+[ext_resource type="Texture2D" uid="uid://b0tk45sc7ilp7" path="res://graphics/roskaa/papers.png" id="28_t7km5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vo865"]
 size = Vector2(72, 224)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mt1b1"]
+size = Vector2(9.69529, 19.2521)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_socay"]
 radius = 69.26
@@ -47,7 +62,23 @@ metadata/_edit_lock_ = true
 [node name="Items" type="Node" parent="."]
 script = ExtResource("2_iqr4c")
 
+[node name="Remote" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(545, 516)
+rotation = -0.485202
+texture = ExtResource("5_dnknw")
+script = ExtResource("7_jl611")
+
+[node name="Area2D" type="Area2D" parent="Items/Remote"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Remote/Area2D"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_vo865")
+metadata/_edit_lock_ = true
+
 [node name="Näkkäri" type="Sprite2D" parent="Items"]
+z_as_relative = false
 position = Vector2(376, 404)
 rotation = -0.415388
 scale = Vector2(1.24, 1.24)
@@ -65,6 +96,7 @@ shape = SubResource("RectangleShape2D_mt1b1")
 metadata/_edit_lock_ = true
 
 [node name="Massi" type="Sprite2D" parent="Items"]
+z_as_relative = false
 position = Vector2(321, 581)
 scale = Vector2(1.44, 1.44)
 texture = ExtResource("6_5c3lw")
@@ -78,6 +110,7 @@ polygon = PackedVector2Array(61, -23.7, 61, -13.1, 42, 12.5, 36.6, 12.5, 17.3, 5
 metadata/_edit_lock_ = true
 
 [node name="Luuri" type="Sprite2D" parent="Items"]
+z_as_relative = false
 position = Vector2(462, 590)
 rotation = 0.37001
 texture = ExtResource("7_tl1me")
@@ -91,7 +124,8 @@ polygon = PackedVector2Array(39.5, -82.9, 39.5, 68.8, 38.3, 82, 37.2, 82, 36.2, 
 metadata/_edit_lock_ = true
 
 [node name="Tollo" type="Sprite2D" parent="Items"]
-position = Vector2(519, 354)
+z_as_relative = false
+position = Vector2(539, 347)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_lbv7d")
 script = ExtResource("1_cqr2q")
@@ -104,6 +138,7 @@ polygon = PackedVector2Array(34, -139.9, 34, -137.6, 35.1, -136, 50, -136, 50, -
 metadata/_edit_lock_ = true
 
 [node name="Rööki1" type="Sprite2D" parent="Items"]
+z_as_relative = false
 position = Vector2(499, 719)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_i5px8")
@@ -117,6 +152,7 @@ polygon = PackedVector2Array(26, -22.7, 26, -5.9, 4.2, 0.400002, 14, 11.2, 14, 2
 metadata/_edit_lock_ = true
 
 [node name="Rööki2" type="Sprite2D" parent="Items"]
+z_as_relative = false
 position = Vector2(579, 537)
 rotation = -0.296706
 scale = Vector2(0.5, 0.5)
@@ -131,6 +167,7 @@ polygon = PackedVector2Array(15, -87.5, 15, 95, -13, 95, -15, 70.9, -15, -95, 5,
 metadata/_edit_lock_ = true
 
 [node name="Rööki3" type="Sprite2D" parent="Items"]
+z_as_relative = false
 position = Vector2(583, 666)
 rotation = 0.37001
 scale = Vector2(0.5, 0.5)
@@ -144,18 +181,265 @@ metadata/_edit_lock_ = true
 polygon = PackedVector2Array(14, -135.2, 14, 138, -14, 138, -14, -136.5, -12, -138, 12, -138)
 metadata/_edit_lock_ = true
 
-[node name="Remote" type="Sprite2D" parent="Items"]
-position = Vector2(374, 732)
-rotation = -0.485202
-texture = ExtResource("5_dnknw")
-script = ExtResource("7_jl611")
+[node name="Tollo2" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(335, 704)
+rotation = -1.2706
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_lbv7d")
+script = ExtResource("1_cqr2q")
 
-[node name="Area2D" type="Area2D" parent="Items/Remote"]
+[node name="Area2D" type="Area2D" parent="Items/Tollo2"]
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Remote/Area2D"]
-position = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_vo865")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Tollo2/Area2D"]
+polygon = PackedVector2Array(34, -139.9, 34, -137.6, 35.1, -136, 50, -136, 50, -133, 51.5, -128, 52.8, -128, 60, -120.8, 60, -116, 69.2, -116, 71.2, -112, 89.2, -112, 91.2, -108, 100.7, -108, 110.7, -100, 118, -100, 118, -97.5, 121, -90, 117.7, -90, 116, -88.9, 116, -82, 113.8, -82, 104, -73.1, 104, -67.4, 103, -66, 110.7, -60, 112.8, -60, 114.8, -64, 134, -64, 134, -61.9, 144, -52.9, 144, -18, 141.7, -18, 140, -16.9, 140, 2, 137.7, 2, 136, 3.10001, 136, 22, 133.7, 22, 132, 23.1, 132, 66, 129.7, 66, 124, 70.9, 124, 77, 116, 83, 116, 89.2, 112, 91.2, 112, 106, 109.9, 106, 100.9, 116, 94.7, 116, 84.7, 124, 80, 124, 80, 124.8, 76.8, 128, 72, 128, 72, 128.8, 64.8, 136, 60, 136, 60, 136.8, 56.8, 140, -26, 140, -26, 137.7, -30.9, 132, -37.2, 132, -39.2, 128, -46, 128, -46, 125.9, -52, 120.9, -52, 116, -56.8, 116, -58.8, 120, -74, 120, -74, 117.7, -75.1, 116, -90, 116, -90, 113.7, -91.1, 112, -98, 112, -98, 109.9, -110.9, 96, -134, 96, -134, 93.9, -140, 88.9, -140, 75.2, -144, 73.2, -144, 58.3, -144, 44, -140, 44, -140, -10, -137.6, -10, -136, -11.1, -136, -22, -133.6, -22, -132, -23.1, -132, -37.2, -128, -39.2, -128, -46, -125.7, -46, -116, -54.9, -116, -62, -113.7, -62, -108, -66.9, -108, -73.2, -104, -75.2, -104, -85.2, -100, -87.2, -100, -97.2, -96, -99.2, -96, -106, -93.9, -106, -84.9, -116, -59.2, -116, -57.2, -120, -52, -120, -52, -129.2, -48, -131.2, -48, -136.8, -44.8, -140, -12, -140, 31.9, -140)
+metadata/_edit_lock_ = true
+
+[node name="Kortti" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(456, 767)
+rotation = 1.01578
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("14_ussgy")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Kortti"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Kortti/Area2D"]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(39.5, 25, -39.5, 25, -39.5, -25, 39.5, -25)
+metadata/_edit_lock_ = true
+
+[node name="Motto" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(554, 592)
+rotation = 0.858702
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("15_585hn")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Motto"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Motto/Area2D"]
+polygon = PackedVector2Array(106, -203.7, 106, -188.2, 108, -187.2, 108, -119, 114, 33.3, 114, 204, -88.1, 204, -98.1, -198, 35, -198, 35, -198.9, 65, -199.9, 65, -200.7, 84, -204, 103.9, -204)
+metadata/_edit_lock_ = true
+
+[node name="Leipä" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(689, 434)
+rotation = 0.235619
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("16_vki24")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Leipä"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Leipä/Area2D"]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-33.5, -60.1, -33.5, -57.2, -1.5, -61.3, -1.5, -59.8, 43.5, -54.8, 43.5, -53.1, 53.5, -47.1, 53.5, -45.7, 62.5, -35.8, 62.5, -32.3, 65.9, -12, 63.5, -12, 58.5, -5.3, 58.5, -2.3, 61.5, 7.7, 61.5, 9, 62.5, 46, 60.6, 46, 51.7, 62, 3.3, 62, -11.5, 60.9, -11.5, 59.5, -20.6, 57, -25.2, 57, -34.2, 60, -36.5, 60, -64.5, 61, -64.5, 59, -67.5, 56.6, -67.5, -7, -65.5, -20.3, -65.5, -24, -67.5, -47.1, -67.5, -49, -66.2, -49, -65.2, -56, -63.3, -56, -59.3, -60, -54.4, -60, -45.5, -59.2, -40.5, -61.4, -40.5, -62, -36.4, -62)
+metadata/_edit_lock_ = true
+
+[node name="Pelikortti" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(674, 567)
+rotation = -0.392699
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("17_j6tbs")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Pelikortti"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Pelikortti/Area2D"]
+polygon = PackedVector2Array(62, -76, 62, 77, 56.7, 83, -54, 83, -62, 77.4, -62, -81.2, -58.4, -83, 52, -83)
+metadata/_edit_lock_ = true
+
+[node name="Kokis" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(530, 466)
+rotation = 0.162316
+scale = Vector2(0.82, 0.82)
+texture = ExtResource("18_2ld36")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Kokis"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Kokis/Area2D"]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-22, -60.7, -22, -58.8, -16.2, -53, -13.5, -53, 23.5, -31, 26.1, -31, 31.1, -37, 36.5, -37, 57.5, -47, 66.5, -47, 72, -44.2, 72, -42.9, 88, -27.9, 88, -24.5, 98, -7.5, 98, -2.5, 100, 1, 100, 42.7, 97.5, 51, 95.9, 51, 90.9, 57, 87.7, 57, 77.3, 65, 56.1, 65, 10, 56.7, 10, 55.5, -60, 34.5, -60, 33.3, -84, 22.3, -84, 20.9, -92, 13.9, -92, 8.6, -100, -3.4, -100, -31.4, -99.8, -33, -98.2, -33, -89.2, -51, -87.9, -51, -78.9, -61, -75.6, -61, -70, -65, -44.4, -65)
+metadata/_edit_lock_ = true
+
+[node name="Kokis2" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(379, 795)
+rotation = -1.07687
+scale = Vector2(0.82, 0.82)
+texture = ExtResource("18_2ld36")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Kokis2"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Kokis2/Area2D"]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-22, -60.7, -22, -58.8, -16.2, -53, -13.5, -53, 23.5, -31, 26.1, -31, 31.1, -37, 36.5, -37, 57.5, -47, 66.5, -47, 72, -44.2, 72, -42.9, 88, -27.9, 88, -24.5, 98, -7.5, 98, -2.5, 100, 1, 100, 42.7, 97.5, 51, 95.9, 51, 90.9, 57, 87.7, 57, 77.3, 65, 56.1, 65, 10, 56.7, 10, 55.5, -60, 34.5, -60, 33.3, -84, 22.3, -84, 20.9, -92, 13.9, -92, 8.6, -100, -3.4, -100, -31.4, -99.8, -33, -98.2, -33, -89.2, -51, -87.9, -51, -78.9, -61, -75.6, -61, -70, -65, -44.4, -65)
+metadata/_edit_lock_ = true
+
+[node name="Pizza" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(711, 724)
+rotation = -0.483456
+scale = Vector2(1.32, 1.32)
+texture = ExtResource("19_8emjl")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Pizza"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Pizza/Area2D"]
+polygon = PackedVector2Array(117, 101.7, 113.4, 107.5, -117, 107.5, -117, -107.5, -38, -107.5, -37.2, -106.5, 56.2, -106.5, 57.2, -107.5, 117, -107.5)
+metadata/_edit_lock_ = true
+
+[node name="Lippu" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(416, 513)
+rotation = -0.483456
+scale = Vector2(1.32, 1.32)
+texture = ExtResource("20_ddhtu")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Lippu"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Lippu/Area2D"]
+polygon = PackedVector2Array(31, 25, -31, 25, -31, -15.7, -20.8, -25, -18.1, -25, 31, -25)
+metadata/_edit_lock_ = true
+
+[node name="Lappu" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(520, 845)
+rotation = 0.193732
+scale = Vector2(1.32, 1.32)
+texture = ExtResource("21_2i4bh")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Lappu"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Lappu/Area2D"]
+polygon = PackedVector2Array(31, 25, -31, 25, -31, -15.7, -20.8, -25, -18.1, -25, 31, -25)
+metadata/_edit_lock_ = true
+
+[node name="Lehti" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(811, 434)
+rotation = -0.914553
+scale = Vector2(1.66, 1.66)
+texture = ExtResource("22_qus32")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Lehti"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Lehti/Area2D"]
+polygon = PackedVector2Array(75, 97, -75, 97, -75, -97, 75, -97)
+metadata/_edit_lock_ = true
+
+[node name="Puhelinluettelo" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(1423, 470)
+rotation = 0.225147
+scale = Vector2(2.15, 2.15)
+texture = ExtResource("23_bg0yv")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Puhelinluettelo"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Puhelinluettelo/Area2D"]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(98.5, -101.8, 98.5, -97.3, 140.5, 39.7, 140.5, 41.7, 135.5, 48, 131.9, 48, 126.9, 50, 119.8, 50, -124.5, 88.3, -124.5, 85.7, -129.5, 79.7, -129.5, 70, -135.3, 24, -136.1, 24, -143.5, -12.8, -143.5, -23, -145.5, -46.8, -145.5, -73, -144.2, -73, -131.2, -84, -126.7, -84, -77.5, -89.8, -77.5, -90.5, -49.8, -98, -40.7, -98, -27.5, -99.2, -27.5, -97.5, -17.8, -94.5, -7.10001, -101, 5.3, -101, 52.1, -105, 95.5, -105)
+metadata/_edit_lock_ = true
+
+[node name="Kana" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(1605, 658)
+rotation = 0.225147
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("24_fra60")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Kana"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Kana/Area2D"]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(97.4, -83, 106, -83, 106, -80.6, 110, -75, 112.6, -75, 124, -68.1, 124, -64.3, 127.4, -54, 138, -41.7, 138, -36.6, 142, -30.6, 142, -4.4, 135, 9.5, 140.4, 14.3, 139.4, 17, 137.9, 17, 130.9, 25, 124.3, 25, 126.7, 33, 124, 33, 111, 51, 107.9, 51, 85, 49.2, 68, 55.9, 68, 53.1, 65.9, 51.8, 50.7, 63, 47.6, 63, 38.6, 59, 31.2, 59, 22, 61.7, 22, 59.1, 18.5, 57, 9.2, 57, -5, 58.8, -17.4, 67, -27.8, 67, -28.8, 69, -37.1, 69, -41, 62.8, -43.2, 65, -50, 65, -50, 67.8, -63.2, 81, -66.5, 81, -70, 82.4, -70, 83.8, -75.2, 89, -114, 89, -138, 67.9, -138, 60.6, -142, 54.6, -142, 33, -130.8, 23, -123, 23, -112.7, 15, -98.8, 15, -78.9, -7, -68.7, -7, -60.7, -13, -51.6, -13, -49.6, -23, -43.5, -23, -36.5, -27, -30, -27, -30, -27.9, -24, -32.9, -24, -41, -21.8, -41, 1.10001, -65, 8.10001, -65, 23.2, -79, 26.5, -79, 43.8, -89, 84.4, -89)
+metadata/_edit_lock_ = true
+
+[node name="DrPepa" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(1531, 771)
+rotation = 0.958186
+scale = Vector2(1.33, 1.33)
+texture = ExtResource("25_ls7i4")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/DrPepa"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/DrPepa/Area2D"]
+polygon = PackedVector2Array(57, -21.5, 56.4, -20, 55.1, -20, 40.2, 7, 38.8, 7, 30.8, 15, 23, 15, 23, 21.7, 3.9, 45, -0.700001, 45, -3, 46, -44.1, 46, -50, 44.6, -50, 42.5, -57, 28.5, -57, -7, -46, -22, -43.6, -22, -37.6, -26, -14, -26, -3.5, -32, 16.7, -32, 22, -32.8, 32.1, -44, 34.5, -44, 37.8, -46, 57, -46)
+metadata/_edit_lock_ = true
+
+[node name="Bansku" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(1319, 726)
+rotation = 0.60912
+scale = Vector2(2.22, 2.22)
+texture = ExtResource("26_qdr7x")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Bansku"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Bansku/Area2D"]
+polygon = PackedVector2Array(2, -51.4, 2, -49.9, 24.9, -25, 26.5, -25, 41.5, -17, 47.2, -17, 61, -13.8, 61, 6, 52.3, 13.4, 50, 12.3, 50, 11.6, 27, 6.5, 27, 52, 25.4, 52, 23.4, 57, 9, 57, 4, 53, 4, 50, 3.6, 48.7, 2.1, 51, 0.200001, 51, -10, 52.3, -10, 49.7, -13.3, 45.2, -12.2, 43, -11.5, 43, -6.5, 24.7, -7.4, 22, -8.2, 22, -14, 20.6, -14, 15.9, -11.2, 14, -12.4, 11, -27.9, -5, -31.4, -5, -53, -14.7, -53, -16.2, -61, -25, -61, -45.3, -50, -52.1, -49, -56, -49, -57, -40, -57, -39, -56.7, -37, -57, -13.9, -57)
+metadata/_edit_lock_ = true
+
+[node name="Kirje" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(1034, 696)
+rotation = -0.333358
+scale = Vector2(1.86, 1.86)
+texture = ExtResource("27_i3ibl")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Kirje"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Kirje/Area2D"]
+polygon = PackedVector2Array(88.5, -53, 88.5, 54, -29, 54, -88.5, 52, -88.5, -8.4, -85.5, -53.1, -85.5, -54, 31.2, -54)
+metadata/_edit_lock_ = true
+
+[node name="Papers" type="Sprite2D" parent="Items"]
+z_as_relative = false
+position = Vector2(1044, 486)
+rotation = -0.333358
+scale = Vector2(1.86, 1.86)
+texture = ExtResource("28_t7km5")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Papers"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Papers/Area2D"]
+polygon = PackedVector2Array(-11.5, -51.6, -11.5, -48.7, 5.5, -26, 29, -37, 34.5, -37, 42.4, -42.3, 44.5, -41.2, 44.5, -40, 66.5, -22.6, 66.5, -6.8, 63.9, 1, 62.4, 1, 50.4, 15, 48.3, 15, 11.2, 45, 6.2, 45, 3.2, 38, 0.800003, 38, -4.6, 33.9, -21.7, 52, -34.5, 52, -43.5, 48.4, -43.5, 46.9, -60.5, 30.9, -60.5, 27.5, -66.5, 14.7, -66.5, -1.7, -50.8, -36, -49.2, -36, -25.6, -52, -13.5, -52)
 metadata/_edit_lock_ = true
 
 [node name="Player" type="CharacterBody2D" parent="."]
@@ -164,7 +448,7 @@ position = Vector2(992, 615)
 script = ExtResource("4_r86g5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-6.10352e-05, 0)
+position = Vector2(-30, -10)
 shape = SubResource("CircleShape2D_socay")
 metadata/_edit_lock_ = true
 
@@ -190,6 +474,20 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("11_x8hco")
 metadata/_edit_lock_ = true
 
+[node name="HUD" type="Node2D" parent="."]
+z_index = 100
+
+[node name="Help" type="RichTextLabel" parent="HUD"]
+offset_left = 75.0
+offset_top = 931.0
+offset_right = 731.0
+offset_bottom = 1024.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Where is the remote? I have 38 seconds until my favorite TV show starts![/center]"
+fit_content = true
+script = ExtResource("9_r2gfw")
+
 [node name="Background music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_r6tol")
 volume_db = -21.081
@@ -202,17 +500,8 @@ one_shot = true
 autostart = true
 script = ExtResource("8_exfkf")
 
-[node name="Help" type="RichTextLabel" parent="."]
-offset_left = 75.0
-offset_top = 931.0
-offset_right = 731.0
-offset_bottom = 1024.0
-theme_override_font_sizes/normal_font_size = 32
-bbcode_enabled = true
-text = "[center]Where is my remote? I have 38 seconds until my favorite TV show starts![/center]"
-fit_content = true
-script = ExtResource("9_r2gfw")
-
+[connection signal="body_entered" from="Items/Remote/Area2D" to="Items/Remote" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Remote/Area2D" to="Items/Remote" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Näkkäri/Area2D" to="Items/Näkkäri" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Näkkäri/Area2D" to="Items/Näkkäri" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Massi/Area2D" to="Items/Massi" method="_on_area_2d_body_entered"]
@@ -227,6 +516,38 @@ script = ExtResource("9_r2gfw")
 [connection signal="body_exited" from="Items/Rööki2/Area2D" to="Items/Rööki2" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Rööki3/Area2D" to="Items/Rööki3" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Rööki3/Area2D" to="Items/Rööki3" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Items/Remote/Area2D" to="Items/Remote" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Items/Remote/Area2D" to="Items/Remote" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Tollo2/Area2D" to="Items/Tollo2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Tollo2/Area2D" to="Items/Tollo2" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Kortti/Area2D" to="Items/Kortti" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Kortti/Area2D" to="Items/Kortti" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Motto/Area2D" to="Items/Motto" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Motto/Area2D" to="Items/Motto" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Leipä/Area2D" to="Items/Leipä" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Leipä/Area2D" to="Items/Leipä" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Pelikortti/Area2D" to="Items/Pelikortti" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Pelikortti/Area2D" to="Items/Pelikortti" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Kokis/Area2D" to="Items/Kokis" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Kokis/Area2D" to="Items/Kokis" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Kokis2/Area2D" to="Items/Kokis2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Kokis2/Area2D" to="Items/Kokis2" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Pizza/Area2D" to="Items/Pizza" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Pizza/Area2D" to="Items/Pizza" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Lippu/Area2D" to="Items/Lippu" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Lippu/Area2D" to="Items/Lippu" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Lappu/Area2D" to="Items/Lappu" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Lappu/Area2D" to="Items/Lappu" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Lehti/Area2D" to="Items/Lehti" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Lehti/Area2D" to="Items/Lehti" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Puhelinluettelo/Area2D" to="Items/Puhelinluettelo" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Puhelinluettelo/Area2D" to="Items/Puhelinluettelo" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Kana/Area2D" to="Items/Kana" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Kana/Area2D" to="Items/Kana" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/DrPepa/Area2D" to="Items/DrPepa" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/DrPepa/Area2D" to="Items/DrPepa" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Bansku/Area2D" to="Items/Bansku" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Bansku/Area2D" to="Items/Bansku" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Kirje/Area2D" to="Items/Kirje" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Kirje/Area2D" to="Items/Kirje" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Papers/Area2D" to="Items/Papers" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Papers/Area2D" to="Items/Papers" method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

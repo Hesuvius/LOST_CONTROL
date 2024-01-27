@@ -6,6 +6,8 @@ var selected = null
 
 func _ready():
 	items = get_children()
+	items.reverse()
+	update_z_indices(null)
 	pass
 
 
@@ -36,7 +38,8 @@ func update_z_indices(new_top_item: Node):
 		if item != new_top_item:
 			item.z_index = z_index
 			z_index += 1
-	new_top_item.z_index = z_index
+	if new_top_item:
+		new_top_item.z_index = z_index
 
 
 func sort_items(a, b):

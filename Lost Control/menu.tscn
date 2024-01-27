@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuvvrlxqe2rje"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_tcir3"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_tcir3")
+
+[node name="main_menu_graphics" type="Node2D" parent="."]
+
+[node name="buttons" type="Node2D" parent="main_menu_graphics"]
+
+[node name="exit_btn" type="Button" parent="main_menu_graphics/buttons"]
+offset_left = 1620.0
+offset_top = 982.0
+offset_right = 1888.0
+offset_bottom = 1049.0
+text = "exit
+"
+
+[node name="start_btn" type="Button" parent="main_menu_graphics/buttons"]
+offset_left = 1328.0
+offset_top = 982.0
+offset_right = 1596.0
+offset_bottom = 1049.0
+text = "start
+"
+
+[node name="next_btn" type="Button" parent="main_menu_graphics/buttons"]
+visible = false
+offset_left = 1328.0
+offset_top = 982.0
+offset_right = 1596.0
+offset_bottom = 1049.0
+text = "next
+"
+
+[node name="story_slides" type="Node2D" parent="."]
+
+[node name="win_slides" type="Node2D" parent="."]
+
+[node name="fail_slides" type="Node2D" parent="."]
+
+[connection signal="pressed" from="main_menu_graphics/buttons/exit_btn" to="." method="_on_exit_btn_pressed"]
+[connection signal="pressed" from="main_menu_graphics/buttons/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="main_menu_graphics/buttons/next_btn" to="." method="_on_next_btn_pressed"]

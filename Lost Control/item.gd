@@ -1,5 +1,6 @@
 extends Sprite2D
 
+var is_remote = false
 var touching = false
 
 

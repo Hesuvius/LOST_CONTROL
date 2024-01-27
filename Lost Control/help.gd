@@ -1,18 +1,14 @@
 extends RichTextLabel
 
 
-var time = 0
-var text_template = "[center]Where is my remote? I have %s seconds until my favorite TV show starts![/center]"
-
-
-func _ready():
-	time = 38
-	set_process(true)
+var text_template = "[center]Where is the remote? I have only %s seconds until my favorite TV show starts![/center]"
+var win_text = "[center]I found it![/center]"
 
 
 func _process(delta):
-	time -= delta
-	
-	var seconds = int(fposmod(time, 60.0))
-
-	text = text_template % [seconds]
+	if (get_parent().is_win):
+		text = win_text
+	else:
+		var time = get_parent().timer.time_left
+		var seconds = int(fposmod(time, 60.0))
+		text = text_template % [seconds]

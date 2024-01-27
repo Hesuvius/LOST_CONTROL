@@ -16,6 +16,8 @@ func _input(event):
 				select_top_item()
 				if selected:
 					update_z_indices(selected)
+					if (selected.is_remote):
+						get_parent().win()
 			else:
 				selected = null
 		if selected && event is InputEventMouseMotion:

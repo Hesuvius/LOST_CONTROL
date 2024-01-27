@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cae4ax4c544ox"]
+[gd_scene load_steps=18 format=3 uid="uid://cae4ax4c544ox"]
 
 [ext_resource type="Script" path="res://item.gd" id="1_cqr2q"]
 [ext_resource type="Script" path="res://main.gd" id="1_g2hj1"]
@@ -9,8 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bq71g4yymlmot" path="res://graphics/arm_colored.png" id="4_xob2e"]
 [ext_resource type="Texture2D" uid="uid://b4hp8y1djaa0g" path="res://graphics/remote.png" id="5_dnknw"]
 [ext_resource type="Texture2D" uid="uid://cosa2bue8fm4t" path="res://graphics/whole_arm.png" id="6_ufxyi"]
+[ext_resource type="Script" path="res://remote.gd" id="7_jl611"]
 [ext_resource type="AudioStream" uid="uid://bpalnqom5i0cn" path="res://sound and music/lost_remote_02.mp3" id="7_r6tol"]
-[ext_resource type="Script" path="res://Ajastin.gd" id="8_exfkf"]
+[ext_resource type="Script" path="res://timer.gd" id="8_exfkf"]
 [ext_resource type="Script" path="res://music.gd" id="8_ob2dm"]
 [ext_resource type="Script" path="res://help.gd" id="9_r2gfw"]
 
@@ -83,7 +84,7 @@ metadata/_edit_lock_ = true
 [node name="Remote" type="Sprite2D" parent="Items"]
 position = Vector2(1559, 268)
 texture = ExtResource("5_dnknw")
-script = ExtResource("1_cqr2q")
+script = ExtResource("7_jl611")
 
 [node name="Area2D" type="Area2D" parent="Items/Remote"]
 metadata/_edit_lock_ = true
@@ -123,7 +124,7 @@ volume_db = -21.081
 autoplay = true
 script = ExtResource("8_ob2dm")
 
-[node name="Ajastin" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="."]
 wait_time = 38.0
 one_shot = true
 autostart = true
@@ -148,4 +149,4 @@ script = ExtResource("9_r2gfw")
 [connection signal="body_exited" from="Items/Icon3/Area2D" to="Items/Icon3" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Remote/Area2D" to="Items/Remote" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Remote/Area2D" to="Items/Remote" method="_on_area_2d_body_exited"]
-[connection signal="timeout" from="Ajastin" to="Ajastin" method="_on_timeout"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

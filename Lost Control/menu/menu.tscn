@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://menu/menu.gd" id="1_tcir3"]
 [ext_resource type="Texture2D" uid="uid://di0onkjgimgb3" path="res://graphics/TV_dark_room.png" id="2_pdpaf"]
+[ext_resource type="Texture2D" uid="uid://bpeywtt20u7uw" path="res://graphics/placeholders/godot_test.jpg" id="3_7t7ne"]
 [ext_resource type="AudioStream" uid="uid://cw5xmkax21d5" path="res://sound and music/lost_remote_hidas.mp3" id="3_372db"]
 
 [node name="Menu" type="Node2D"]
@@ -23,8 +24,8 @@ offset_right = 1234.0
 offset_bottom = 949.0
 tooltip_text = "Bye"
 theme_override_font_sizes/font_size = 40
-text = "exit
-"
+text = "exit"
+
 
 [node name="start_btn" type="Button" parent="main_menu_graphics/buttons"]
 offset_left = 674.0
@@ -33,19 +34,30 @@ offset_right = 942.0
 offset_bottom = 949.0
 tooltip_text = "Click this to start the game"
 theme_override_font_sizes/font_size = 40
-text = "start
-"
+text = "start"
+
 
 [node name="next_btn" type="Button" parent="main_menu_graphics/buttons"]
 visible = false
-offset_left = 1328.0
-offset_top = 982.0
-offset_right = 1596.0
-offset_bottom = 1049.0
-text = "next
-"
+offset_left = 1611.0
+offset_top = 987.0
+offset_right = 1879.0
+offset_bottom = 1054.0
+text = "next"
 
 [node name="story_slides" type="Node2D" parent="."]
+
+[node name="story1" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
+visible = false
+position = Vector2(937, 537)
+scale = Vector2(1.65, 1.65)
+texture = ExtResource("3_7t7ne")
+
+[node name="story2" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
+visible = false
+position = Vector2(1215.5, 653.75)
+scale = Vector2(2.42875, 2.10917)
+texture = ExtResource("3_7t7ne")
 
 [node name="win_slides" type="Node2D" parent="."]
 
@@ -66,6 +78,11 @@ theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
 text = "LOST CONTROL"
 
+[node name="slide_timer" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+
 [connection signal="pressed" from="main_menu_graphics/buttons/exit_btn" to="." method="_on_exit_btn_pressed"]
 [connection signal="pressed" from="main_menu_graphics/buttons/start_btn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="main_menu_graphics/buttons/next_btn" to="." method="_on_next_btn_pressed"]
+[connection signal="timeout" from="slide_timer" to="." method="_on_slide_timer_timeout"]

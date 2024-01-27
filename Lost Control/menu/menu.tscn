@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuvvrlxqe2rje"]
+[gd_scene load_steps=5 format=3 uid="uid://cuvvrlxqe2rje"]
 
 [ext_resource type="Script" path="res://menu/menu.gd" id="1_tcir3"]
 [ext_resource type="Texture2D" uid="uid://di0onkjgimgb3" path="res://graphics/TV_dark_room.png" id="2_pdpaf"]
@@ -26,7 +26,6 @@ tooltip_text = "Bye"
 theme_override_font_sizes/font_size = 40
 text = "exit"
 
-
 [node name="start_btn" type="Button" parent="main_menu_graphics/buttons"]
 offset_left = 674.0
 offset_top = 882.0
@@ -35,7 +34,6 @@ offset_bottom = 949.0
 tooltip_text = "Click this to start the game"
 theme_override_font_sizes/font_size = 40
 text = "start"
-
 
 [node name="next_btn" type="Button" parent="main_menu_graphics/buttons"]
 visible = false
@@ -70,10 +68,13 @@ autoplay = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 texture_repeat = 2
-offset_left = 804.0
-offset_top = 2.0
-offset_right = 1314.0
-offset_bottom = 138.0
+offset_left = 782.0
+offset_top = 433.0
+offset_right = 1292.0
+offset_bottom = 569.0
+rotation = 0.14084
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
 theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
 text = "LOST CONTROL"

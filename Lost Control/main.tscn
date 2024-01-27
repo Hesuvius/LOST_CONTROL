@@ -36,7 +36,7 @@ shape = SubResource("CircleShape2D_lpb0i")
 metadata/_edit_lock_ = true
 
 [node name="Hand" type="CharacterBody2D" parent="."]
-position = Vector2(1566, 1020)
+position = Vector2(1678, 1001)
 script = ExtResource("4_r86g5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Hand"]

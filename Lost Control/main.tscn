@@ -39,7 +39,6 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_iqr4c")
 
 [node name="Icon" type="Sprite2D" parent="Items"]
-z_index = 1
 position = Vector2(412, 236)
 texture = ExtResource("2_wffpi")
 script = ExtResource("1_cqr2q")
@@ -54,7 +53,6 @@ shape = SubResource("CircleShape2D_lpb0i")
 metadata/_edit_lock_ = true
 
 [node name="Icon2" type="Sprite2D" parent="Items"]
-z_index = 1
 position = Vector2(314, 510)
 texture = ExtResource("2_wffpi")
 script = ExtResource("1_cqr2q")
@@ -69,7 +67,6 @@ shape = SubResource("CircleShape2D_lpb0i")
 metadata/_edit_lock_ = true
 
 [node name="Icon3" type="Sprite2D" parent="Items"]
-z_index = 1
 position = Vector2(702, 676)
 texture = ExtResource("2_wffpi")
 script = ExtResource("1_cqr2q")

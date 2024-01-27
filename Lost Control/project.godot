@@ -14,7 +14,7 @@ config/name="LOST_CONTROL"
 config/description="FGJ gamejam 2024 projekti"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://graphics/icon.svg"
 
 [display]
 

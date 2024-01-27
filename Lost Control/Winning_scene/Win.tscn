@@ -1,3 +1,46 @@
-[gd_scene format=3 uid="uid://bj8dakdkh3eln"]
+[gd_scene load_steps=5 format=3 uid="uid://bj8dakdkh3eln"]
+
+[ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="1_shaoi"]
+[ext_resource type="Texture2D" uid="uid://b4hp8y1djaa0g" path="res://graphics/remote.png" id="2_v2p1m"]
+[ext_resource type="Texture2D" uid="uid://cosa2bue8fm4t" path="res://graphics/whole_arm.png" id="3_gcl4x"]
+[ext_resource type="Script" path="res://Lose_scene/Back to menu button.gd" id="4_1x4m3"]
 
 [node name="Win" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_repeat = 2
+offset_left = 696.0
+offset_top = 312.0
+offset_right = 1506.0
+offset_bottom = 778.0
+rotation = 0.14084
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "You found the controller and you didn't miss your favourite show! :)"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_shaoi")
+volume_db = -20.0
+pitch_scale = 1.5
+autoplay = true
+
+[node name="Remote" type="Sprite2D" parent="."]
+position = Vector2(955, 800)
+texture = ExtResource("2_v2p1m")
+
+[node name="WholeArm" type="Sprite2D" parent="."]
+position = Vector2(998, 1078)
+scale = Vector2(3.04023, 2.35532)
+texture = ExtResource("3_gcl4x")
+
+[node name="Back to menu button" type="Button" parent="."]
+offset_left = 1435.0
+offset_top = 911.0
+offset_right = 1875.0
+offset_bottom = 1029.0
+text = "Back to menu"
+script = ExtResource("4_1x4m3")
+
+[connection signal="pressed" from="Back to menu button" to="Back to menu button" method="_on_pressed"]

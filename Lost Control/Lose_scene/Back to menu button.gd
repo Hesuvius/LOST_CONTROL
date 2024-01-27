@@ -1,4 +1,4 @@
-extends Timer
+extends Button
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,5 +11,5 @@ func _process(delta):
 	pass
 
 
-func _on_timeout():
-	get_tree().change_scene_to_file("res:///Lose.tscn")
+func _on_pressed():
+	get_tree().change_scene_to_file("res://start_menu/menu.tscn")

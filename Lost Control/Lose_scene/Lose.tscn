@@ -1,3 +1,43 @@
-[gd_scene format=3 uid="uid://dkqyrqcq5wpgs"]
+[gd_scene load_steps=3 format=3 uid="uid://dkqyrqcq5wpgs"]
+
+[ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="1_f46ax"]
+[ext_resource type="Script" path="res://Lose_scene/Back to menu button.gd" id="2_metpv"]
 
 [node name="Lose" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_repeat = 2
+offset_left = 664.0
+offset_top = 451.0
+offset_right = 1474.0
+offset_bottom = 917.0
+rotation = 0.0236144
+theme_override_colors/default_color = Color(0.227451, 0.45098, 0.301961, 1)
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "You never found your TV controller and got depressed."
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_f46ax")
+volume_db = -20.0
+pitch_scale = 0.44
+autoplay = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(1016, 1)
+scale = Vector2(1.24, 1)
+amount = 200
+emission_shape = 3
+emission_rect_extents = Vector2(800, 1)
+gravity = Vector2(2.08165e-12, 849.92)
+
+[node name="Back to menu button" type="Button" parent="."]
+offset_left = 1492.0
+offset_top = 943.0
+offset_right = 1841.0
+offset_bottom = 1022.0
+text = "Back to menu"
+script = ExtResource("2_metpv")
+
+[connection signal="pressed" from="Back to menu button" to="Back to menu button" method="_on_pressed"]

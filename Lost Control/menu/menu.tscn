@@ -10,7 +10,7 @@ script = ExtResource("1_tcir3")
 [node name="main_menu_graphics" type="Node2D" parent="."]
 
 [node name="TvDarkRoom" type="Sprite2D" parent="main_menu_graphics"]
-position = Vector2(988, 558)
+position = Vector2(1010, 540)
 scale = Vector2(2.86225, 2.86224)
 texture = ExtResource("2_pdpaf")
 

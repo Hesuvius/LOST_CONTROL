@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cae4ax4c544ox"]
+[gd_scene load_steps=19 format=3 uid="uid://cae4ax4c544ox"]
 
 [ext_resource type="Script" path="res://item.gd" id="1_cqr2q"]
 [ext_resource type="Script" path="res://main.gd" id="1_g2hj1"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://timer.gd" id="8_exfkf"]
 [ext_resource type="Script" path="res://music.gd" id="8_ob2dm"]
 [ext_resource type="Script" path="res://help.gd" id="9_r2gfw"]
+[ext_resource type="Texture2D" uid="uid://ceax2bh0toor0" path="res://graphics/whole_arm_closed.png" id="11_x8hco"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lpb0i"]
 
@@ -104,18 +105,26 @@ position = Vector2(-6.10352e-05, 0)
 shape = SubResource("CircleShape2D_socay")
 metadata/_edit_lock_ = true
 
-[node name="Arm" type="Line2D" parent="Player"]
+[node name="UpperArm" type="Line2D" parent="Player"]
 points = PackedVector2Array(299, 608, 295, 265, 258, 221)
 width = 130.0
 texture = ExtResource("4_xob2e")
 texture_mode = 2
 metadata/_edit_lock_ = true
 
-[node name="Hand" type="Sprite2D" parent="Player"]
+[node name="OpenHand" type="Sprite2D" parent="Player"]
 position = Vector2(98, 104)
 rotation = -0.785398
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("6_ufxyi")
+metadata/_edit_lock_ = true
+
+[node name="ClosedHand" type="Sprite2D" parent="Player"]
+visible = false
+position = Vector2(115.79, 99.13)
+rotation = -0.785398
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("11_x8hco")
 metadata/_edit_lock_ = true
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]

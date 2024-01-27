@@ -1,12 +1,22 @@
 extends CharacterBody2D
 
 @onready var collision_shape = $CollisionShape2D
-@onready var arm = $Arm
+@onready var upperArm = $UpperArm
+@onready var openHand = $OpenHand
+@onready var closedHand = $ClosedHand
 
 
 func _input(event):
-	if event is InputEventMouseMotion && Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		update_position(event.relative)
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		if event is InputEventMouseMotion && Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			update_position(event.relative)
+		if event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				openHand.visible = false
+				closedHand.visible = true
+			else:
+				openHand.visible = true
+				closedHand.visible = false
 	pass
 
 
@@ -25,5 +35,5 @@ func update_position(relative_movement):
 	position.x = clamp(position.x + relative_movement.x, min, max_x)
 	var old_y = position.y
 	position.y = clamp(position.y + relative_movement.y, min, max_y)
-	var old_point = arm.points[0]
-	arm.points[0] = Vector2(old_point.x + old_x - position.x, old_point.y + old_y - position.y)
+	var old_point = upperArm.points[0]
+	upperArm.points[0] = Vector2(old_point.x + old_x - position.x, old_point.y + old_y - position.y)

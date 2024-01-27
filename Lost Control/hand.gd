@@ -52,16 +52,16 @@ func calculate_polygon_measurements(polygon_points):
 
 
 func _input(event):
-	if event is InputEventMouseMotion:
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			var relative_movement = event.relative
-			position.x = position.x + relative_movement.x
-			position.y = position.y + relative_movement.y
-			clamp_position()
 	if event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if event is InputEventMouseButton:
 		if event.pressed && event.button_index == MOUSE_BUTTON_LEFT:
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if event is InputEventMouseMotion:
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			var relative_movement = event.relative
+			position.x = position.x + relative_movement.x
+			position.y = position.y + relative_movement.y
+			clamp_position()
 	pass

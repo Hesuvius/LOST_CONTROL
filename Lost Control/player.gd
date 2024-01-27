@@ -32,8 +32,15 @@ func update_position(relative_movement):
 	var max_y = bottom_right.y - (radius * scale)
 
 	var old_x = position.x
-	position.x = clamp(position.x + relative_movement.x, min, max_x)
 	var old_y = position.y
+
+	position.x = clamp(position.x + relative_movement.x, min, max_x)
 	position.y = clamp(position.y + relative_movement.y, min, max_y)
+	
+	var x_change = old_x - position.x
+	var y_change = old_y - position.y
+	
+	get_parent().items.move_selected_item(Vector2(-x_change, -y_change))
+
 	var old_point = upperArm.points[0]
-	upperArm.points[0] = Vector2(old_point.x + old_x - position.x, old_point.y + old_y - position.y)
+	upperArm.points[0] = Vector2(old_point.x + x_change, old_point.y + y_change)

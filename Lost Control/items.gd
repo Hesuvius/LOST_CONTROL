@@ -20,10 +20,12 @@ func _input(event):
 						get_parent().win()
 			else:
 				selected = null
-		if selected && event is InputEventMouseMotion:
-			var relative_movement = event.relative
-			selected.position.x = selected.position.x + relative_movement.x
-			selected.position.y = selected.position.y + relative_movement.y
+
+
+func move_selected_item(movement: Vector2):
+	if selected:
+		selected.position.x += movement.x
+		selected.position.y += movement.y
 
 
 func update_z_indices(new_top_item: Node):

@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var timer = $Timer
+@onready var items = $Items
+
 var is_win = false
 
 

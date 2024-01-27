@@ -32,23 +32,59 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hand"]
 scale = Vector2(0.2, 0.2)
-polygon = PackedVector2Array(-111, -498.7, -111, -497.4, -93, -490.4, -93, -488.7, -89.2, -484.1, -74.4, -491, -56.9, -491, -47, -489.8, -47, -488.4, -36, -484.4, -36, -482.9, -28.7, -476.4, -24, -483, -21.4, -483, -12.4, -487, -0.700012, -487, 8, -484.5, 8, -483.4, 19, -479.4, 19, -477.9, 35, -463.9, 35, -462.8, 45, -452.8, 45, -450.5, 48.1, -444.2, 56, -455, 58.4, -455, 66.4, -460, 72.7, -460, 88.7, -465, 100.3, -465, 127, -455.4, 127, -453.8, 137, -443.8, 137, -441.5, 145, -426.5, 145, -420.3, 150, -403.3, 150, -391, 170, -255.1, 170, -240, 177.8, -153, 178.8, -153, 188, -83.1, 188, 26, 186.8, 26, 182.8, 71, 181.7, 71, 169.7, 137, 168.5, 137, 161.6, 165, 160.3, 165, 137, 213.5, 137, 222.6, 140, 237.8, 140, 508, 141.1, 512, -222, 512, -222, 508.9, -209, 268.9, -209, 235, -212.9, 151, -264, 84, -264.9, 84, -296, 50.8, -296, 48.6, -328, 3.59998, -328, -3.60001, -331, -18.8, -331, -64, -332, -106, -330.9, -106, -329.9, -121, -328.5, -121, -319.6, -157, -318.3, -157, -310.3, -175, -308.9, -175, -295.8, -187, -289.3, -187, -280.3, -190, -269.9, -190, -260, -188.8, -260, -187.5, -249, -184.5, -249, -182.9, -233, -167.9, -233, -165.6, -228, -157.6, -228, -152, -221.5, -125, -220.6, -125, -207.6, -90, -190.5, -81, -185.8, -81, -167, -76.5, -167, -81.7, -182, -170.8, -182, -233.1, -179, -256.3, -179, -396, -181, -475, -179.8, -475, -177.8, -494, -175.7, -494, -167.8, -501, -164.1, -501, -155, -503.5, -155, -505.3)
+polygon = PackedVector2Array(150, -403.3, 150, -391, 170, -255.1, 170, -240, 177.8, -153, 178.8, -153, 188, -83.1, 188, 26, 186.8, 26, 175, 80, -30, 100, -225, 95, -264, 84, -264.9, 84, -296, 50.8, -296, 48.6, -328, 3.59998, -328, -3.60001, -331, -18.8, -331, -64, -332, -106, -330.9, -106, -329.9, -121, -328.5, -121, -319.6, -157, -318.3, -157, -310.3, -175, -308.9, -175, -295.8, -187, -289.3, -187, -280.3, -190, -269.9, -190, -260, -188.8, -260, -187.5, -249, -184.5, -249, -182.9, -233, -167.9, -233, -165.6, -228, -157.6, -228, -152, -221.5, -125, -220.6, -125, -207.6, -90, -190.5, -81, -185.8, -81, -167, -76.5, -167, -81.7, -182, -170.8, -182, -233.1, -179, -256.3, -179, -396)
 metadata/_edit_lock_ = true
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Items" type="Node" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="Items"]
 z_index = 1
-position = Vector2(200, 200)
+position = Vector2(412, 236)
 texture = ExtResource("2_wffpi")
 script = ExtResource("1_cqr2q")
 
-[node name="Area2D" type="Area2D" parent="Icon"]
+[node name="Area2D" type="Area2D" parent="Items/Icon"]
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Icon/Area2D"]
 z_index = 1
 scale = Vector2(7.22, 7.22)
 shape = SubResource("CircleShape2D_lpb0i")
 metadata/_edit_lock_ = true
 
-[connection signal="body_entered" from="Icon/Area2D" to="Icon" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Icon/Area2D" to="Icon" method="_on_area_2d_body_exited"]
+[node name="Icon2" type="Sprite2D" parent="Items"]
+z_index = 1
+position = Vector2(314, 510)
+texture = ExtResource("2_wffpi")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Icon2"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Icon2/Area2D"]
+z_index = 1
+scale = Vector2(7.22, 7.22)
+shape = SubResource("CircleShape2D_lpb0i")
+metadata/_edit_lock_ = true
+
+[node name="Icon3" type="Sprite2D" parent="Items"]
+z_index = 1
+position = Vector2(702, 676)
+texture = ExtResource("2_wffpi")
+script = ExtResource("1_cqr2q")
+
+[node name="Area2D" type="Area2D" parent="Items/Icon3"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Icon3/Area2D"]
+z_index = 1
+scale = Vector2(7.22, 7.22)
+shape = SubResource("CircleShape2D_lpb0i")
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="Items/Icon/Area2D" to="Items/Icon" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Icon/Area2D" to="Items/Icon" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Icon2/Area2D" to="Items/Icon2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Icon2/Area2D" to="Items/Icon2" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Items/Icon3/Area2D" to="Items/Icon3" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Items/Icon3/Area2D" to="Items/Icon3" method="_on_area_2d_body_exited"]

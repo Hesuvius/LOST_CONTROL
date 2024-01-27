@@ -1,22 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://cae4ax4c544ox"]
+[gd_scene load_steps=5 format=3 uid="uid://cae4ax4c544ox"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_3f0fr"]
-[ext_resource type="Texture2D" uid="uid://de05233hfjaay" path="res://icon.svg" id="2_wffpi"]
+[ext_resource type="Script" path="res://drag-and-drop.gd" id="1_cqr2q"]
+[ext_resource type="Texture2D" uid="uid://de05233hfjaay" path="res://graphics/icon.svg" id="2_wffpi"]
+[ext_resource type="Texture2D" uid="uid://csphecbx8q5yu" path="res://graphics/scene.png" id="3_r6fis"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lpb0i"]
 
 [node name="Main" type="Node2D"]
-position = Vector2(200, 200)
-script = ExtResource("1_3f0fr")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(2.08165e-12, 2.08165e-12)
+z_index = 2
+position = Vector2(200, 200)
 texture = ExtResource("2_wffpi")
+script = ExtResource("1_cqr2q")
 
 [node name="Area2D" type="Area2D" parent="Icon"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Area2D"]
 scale = Vector2(7.22, 7.22)
 shape = SubResource("CircleShape2D_lpb0i")
+
+[node name="Table" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Table"]
+position = Vector2(960, 540)
+scale = Vector2(2, 2)
+texture = ExtResource("3_r6fis")
 
 [connection signal="input_event" from="Icon/Area2D" to="." method="_on_area_2d_input_event"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cae4ax4c544ox"]
+[gd_scene load_steps=11 format=3 uid="uid://cae4ax4c544ox"]
 
 [ext_resource type="Script" path="res://drag-and-drop.gd" id="1_cqr2q"]
 [ext_resource type="Texture2D" uid="uid://de05233hfjaay" path="res://graphics/icon.svg" id="2_wffpi"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://hand.gd" id="4_r86g5"]
 [ext_resource type="Texture2D" uid="uid://bq71g4yymlmot" path="res://graphics/arm_colored.png" id="4_xob2e"]
 [ext_resource type="AudioStream" uid="uid://bpalnqom5i0cn" path="res://sound and music/lost_remote_02.mp3" id="7_r6tol"]
+[ext_resource type="Script" path="res://Ajastin.gd" id="8_exfkf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lpb0i"]
 
@@ -99,9 +100,25 @@ metadata/_edit_lock_ = true
 stream = ExtResource("7_r6tol")
 autoplay = true
 
+[node name="Ajastin" type="Timer" parent="."]
+wait_time = 37.0
+one_shot = true
+autostart = true
+script = ExtResource("8_exfkf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 509.0
+offset_top = 857.0
+offset_right = 1075.0
+offset_bottom = 984.0
+tooltip_text = "Tämä on tooltip. Näitä voi tunkea kaikkialle."
+text = "Sinulla on 10 sekunttia aikaa löytää ohjain tai häviät pelin."
+fit_content = true
+
 [connection signal="body_entered" from="Items/Icon/Area2D" to="Items/Icon" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Icon/Area2D" to="Items/Icon" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Icon2/Area2D" to="Items/Icon2" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Icon2/Area2D" to="Items/Icon2" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Icon3/Area2D" to="Items/Icon3" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Icon3/Area2D" to="Items/Icon3" method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Ajastin" to="Ajastin" method="_on_timeout"]

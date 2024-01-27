@@ -1,5 +1,7 @@
 extends Node2D
 
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_exit_btn_pressed():
 	print("exit")
@@ -13,3 +15,4 @@ func _on_start_btn_pressed():
 
 func _on_next_btn_pressed():
 	print("next")
+

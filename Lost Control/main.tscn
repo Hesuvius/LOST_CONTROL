@@ -80,7 +80,6 @@ script = ExtResource("4_r86g5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-6.10352e-05, 0)
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_socay")
 metadata/_edit_lock_ = true
 

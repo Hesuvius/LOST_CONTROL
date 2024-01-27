@@ -1,10 +1,10 @@
 extends Node2D
 
 
-
 func _on_exit_btn_pressed():
 	print("exit")
 	get_tree().quit()
+
 
 func _on_start_btn_pressed():
 	print("start")

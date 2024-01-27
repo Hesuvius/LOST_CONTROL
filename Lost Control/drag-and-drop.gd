@@ -2,15 +2,22 @@ extends Sprite2D
 
 var selected = false
 
-func _on_area_2d_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click"):
-		selected = true
 
-func _physics_process(delta):
-	if selected:
-		global_position = lerp(global_position, get_global_mouse_position(), 25 * delta )
+func _on_area_2d_input_event(viewport, event, shape_idx):
+	pass
+
 
 func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
-			selected = false
+	if selected && event is InputEventMouseMotion:
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			var relative_movement = event.relative
+			position.x = position.x + relative_movement.x
+			position.y = position.y + relative_movement.y
+
+
+func _on_area_2d_body_entered(body):
+	selected = true
+
+
+func _on_area_2d_body_exited(body):
+	selected = false

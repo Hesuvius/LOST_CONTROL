@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cae4ax4c544ox"]
+[gd_scene load_steps=13 format=3 uid="uid://cae4ax4c544ox"]
 
 [ext_resource type="Script" path="res://drag-and-drop.gd" id="1_cqr2q"]
 [ext_resource type="Texture2D" uid="uid://de05233hfjaay" path="res://graphics/icon.svg" id="2_wffpi"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cosa2bue8fm4t" path="res://graphics/whole_arm.png" id="6_ufxyi"]
 [ext_resource type="AudioStream" uid="uid://bpalnqom5i0cn" path="res://sound and music/lost_remote_02.mp3" id="7_r6tol"]
 [ext_resource type="Script" path="res://Ajastin.gd" id="8_exfkf"]
+[ext_resource type="Script" path="res://music.gd" id="8_ob2dm"]
+[ext_resource type="Script" path="res://help.gd" id="9_r2gfw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lpb0i"]
 
@@ -101,6 +103,7 @@ metadata/_edit_lock_ = true
 stream = ExtResource("7_r6tol")
 volume_db = -21.081
 autoplay = true
+script = ExtResource("8_ob2dm")
 
 [node name="Ajastin" type="Timer" parent="."]
 wait_time = 38.0
@@ -108,14 +111,16 @@ one_shot = true
 autostart = true
 script = ExtResource("8_exfkf")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 509.0
-offset_top = 857.0
-offset_right = 1075.0
-offset_bottom = 984.0
-tooltip_text = "Tämä on tooltip. Näitä voi tunkea kaikkialle."
-text = "Sinulla on 10 sekunttia aikaa löytää ohjain tai häviät pelin."
+[node name="Help" type="RichTextLabel" parent="."]
+offset_left = 75.0
+offset_top = 931.0
+offset_right = 731.0
+offset_bottom = 1024.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Where is my remote? I have 38 seconds until my favorite TV show starts![/center]"
 fit_content = true
+script = ExtResource("9_r2gfw")
 
 [connection signal="body_entered" from="Items/Icon/Area2D" to="Items/Icon" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Icon/Area2D" to="Items/Icon" method="_on_area_2d_body_exited"]

@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://drag-and-drop.gd" id="1_cqr2q"]
 [ext_resource type="Texture2D" uid="uid://de05233hfjaay" path="res://graphics/icon.svg" id="2_wffpi"]
-[ext_resource type="Texture2D" uid="uid://dorstl5hmkul6" path="res://graphics/hand_colored.png" id="3_bnre2"]
 [ext_resource type="Texture2D" uid="uid://csphecbx8q5yu" path="res://graphics/scene.png" id="3_r6fis"]
 [ext_resource type="Script" path="res://hand.gd" id="4_r86g5"]
 [ext_resource type="Texture2D" uid="uid://bq71g4yymlmot" path="res://graphics/arm_colored.png" id="4_xob2e"]
+[ext_resource type="Texture2D" uid="uid://cosa2bue8fm4t" path="res://graphics/whole_arm.png" id="6_ufxyi"]
 [ext_resource type="AudioStream" uid="uid://bpalnqom5i0cn" path="res://sound and music/lost_remote_02.mp3" id="7_r6tol"]
 [ext_resource type="Script" path="res://Ajastin.gd" id="8_exfkf"]
 
@@ -75,25 +75,27 @@ metadata/_edit_lock_ = true
 
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 100
-position = Vector2(1314, 707)
+position = Vector2(992, 615)
 script = ExtResource("4_r86g5")
 
-[node name="Arm" type="Line2D" parent="Player"]
-position = Vector2(-1314, -707)
-points = PackedVector2Array(1292, 1096, 1437, 1151, 1351, 767)
-width = 80.0
-texture = ExtResource("4_xob2e")
-texture_mode = 2
-
-[node name="Hand" type="Sprite2D" parent="Player"]
-position = Vector2(-7.7, 4.75)
-rotation = -0.31765
-scale = Vector2(2, 2)
-texture = ExtResource("3_bnre2")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-6.10352e-05, 0)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_socay")
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("CircleShape2D_socay")
+[node name="Arm" type="Line2D" parent="Player"]
+points = PackedVector2Array(299, 608, 295, 265, 258, 221)
+width = 130.0
+texture = ExtResource("4_xob2e")
+texture_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Hand" type="Sprite2D" parent="Player"]
+position = Vector2(98, 104)
+rotation = -0.785398
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_ufxyi")
 metadata/_edit_lock_ = true
 
 [node name="Background music" type="AudioStreamPlayer" parent="."]

@@ -12,7 +12,7 @@ offset_top = 451.0
 offset_right = 1474.0
 offset_bottom = 917.0
 rotation = 0.0236144
-theme_override_colors/default_color = Color(0.227451, 0.45098, 0.301961, 1)
+theme_override_colors/default_color = Color(0, 0.286275, 0.541176, 1)
 theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
 theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
@@ -28,15 +28,21 @@ autoplay = true
 position = Vector2(1016, 1)
 scale = Vector2(1.24, 1)
 amount = 200
+lifetime = 5.49
+preprocess = 9.15
+explosiveness = 0.04
 emission_shape = 3
 emission_rect_extents = Vector2(800, 1)
 gravity = Vector2(2.08165e-12, 849.92)
+scale_amount_max = 19.3
+color = Color(0, 0.117647, 0.643137, 1)
 
 [node name="Back to menu button" type="Button" parent="."]
-offset_left = 1492.0
-offset_top = 943.0
-offset_right = 1841.0
-offset_bottom = 1022.0
+offset_left = 1504.0
+offset_top = 950.0
+offset_right = 1853.0
+offset_bottom = 1029.0
+theme_override_font_sizes/font_size = 37
 text = "Back to menu"
 script = ExtResource("2_metpv")
 

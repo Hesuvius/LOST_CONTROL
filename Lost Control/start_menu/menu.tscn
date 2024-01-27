@@ -55,8 +55,8 @@ text = "next"
 [node name="story1" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
 visible = false
 z_index = 3
-position = Vector2(973, 461)
-scale = Vector2(1.65, 1.65)
+position = Vector2(832.287, 393.7)
+scale = Vector2(1.98866, 1.99337)
 texture = ExtResource("3_pgnhp")
 
 [node name="story2" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]

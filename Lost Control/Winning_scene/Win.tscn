@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj8dakdkh3eln"]
+[gd_scene load_steps=6 format=3 uid="uid://bj8dakdkh3eln"]
 
 [ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="1_shaoi"]
 [ext_resource type="Texture2D" uid="uid://b4hp8y1djaa0g" path="res://graphics/remote.png" id="2_v2p1m"]
 [ext_resource type="Texture2D" uid="uid://cosa2bue8fm4t" path="res://graphics/whole_arm.png" id="3_gcl4x"]
 [ext_resource type="Script" path="res://Lose_scene/Back to menu button.gd" id="4_1x4m3"]
+[ext_resource type="Texture2D" uid="uid://cnj57r3o1ktpe" path="res://graphics/placeholders/gigachad.jpeg" id="5_6q1ls"]
 
 [node name="Win" type="Node2D"]
 
@@ -40,7 +41,12 @@ offset_left = 1435.0
 offset_top = 911.0
 offset_right = 1875.0
 offset_bottom = 1029.0
+theme_override_font_sizes/font_size = 37
 text = "Back to menu"
 script = ExtResource("4_1x4m3")
+
+[node name="Gigachad" type="Sprite2D" parent="."]
+position = Vector2(295, 749)
+texture = ExtResource("5_6q1ls")
 
 [connection signal="pressed" from="Back to menu button" to="Back to menu button" method="_on_pressed"]

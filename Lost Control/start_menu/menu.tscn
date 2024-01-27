@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cuvvrlxqe2rje"]
+[gd_scene load_steps=8 format=3 uid="uid://cuvvrlxqe2rje"]
 
 [ext_resource type="Script" path="res://start_menu/menu.gd" id="1_tcir3"]
 [ext_resource type="Texture2D" uid="uid://di0onkjgimgb3" path="res://graphics/TV_dark_room.png" id="2_pdpaf"]
-[ext_resource type="Texture2D" uid="uid://bpeywtt20u7uw" path="res://graphics/placeholders/godot_test.jpg" id="3_7t7ne"]
 [ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="3_oagbh"]
+[ext_resource type="Texture2D" uid="uid://daj2c2xah68fw" path="res://graphics/placeholders/godot_test1.jpg" id="3_pgnhp"]
+[ext_resource type="Texture2D" uid="uid://1fmyhh45n511" path="res://graphics/placeholders/godot_test2.jpg" id="4_elq01"]
+[ext_resource type="Texture2D" uid="uid://buchx5vibpgot" path="res://graphics/placeholders/godot_test3.jpg" id="5_h08ah"]
 
 [sub_resource type="Theme" id="Theme_y0f10"]
 
@@ -38,6 +40,7 @@ theme_override_font_sizes/font_size = 40
 text = "start"
 
 [node name="next_btn" type="Button" parent="main_menu_graphics/buttons"]
+visible = false
 z_index = 5
 offset_left = 1530.0
 offset_top = 939.0
@@ -51,37 +54,30 @@ text = "next"
 [node name="story1" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
 visible = false
 z_index = 3
-position = Vector2(937, 537)
+position = Vector2(973, 461)
 scale = Vector2(1.65, 1.65)
-texture = ExtResource("3_7t7ne")
+texture = ExtResource("3_pgnhp")
 
 [node name="story2" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
 visible = false
 z_index = 3
-position = Vector2(554, 406)
+position = Vector2(1126, 486)
 scale = Vector2(2.42875, 2.10917)
-texture = ExtResource("3_7t7ne")
+texture = ExtResource("4_elq01")
 
 [node name="story3" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
 visible = false
 z_index = 3
 position = Vector2(737.25, 497.375)
 scale = Vector2(1.92937, 1.86792)
-texture = ExtResource("3_7t7ne")
+texture = ExtResource("5_h08ah")
 
-[node name="story4" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
+[node name="safety_filler" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
 visible = false
 z_index = 3
-position = Vector2(816.75, 645.875)
-scale = Vector2(2.06312, 1.77958)
-texture = ExtResource("3_7t7ne")
-
-[node name="story5" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
-visible = false
-z_index = 3
-position = Vector2(668, 537)
-scale = Vector2(2.42875, 2.10917)
-texture = ExtResource("3_7t7ne")
+position = Vector2(737.25, 497.375)
+scale = Vector2(1.92937, 1.86792)
+texture = ExtResource("5_h08ah")
 
 [node name="win_slides" type="Node2D" parent="."]
 

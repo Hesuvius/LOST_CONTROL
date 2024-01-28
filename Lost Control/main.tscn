@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://cae4ax4c544ox"]
+[gd_scene load_steps=56 format=3 uid="uid://cae4ax4c544ox"]
 
 [ext_resource type="Script" path="res://item.gd" id="1_cqr2q"]
 [ext_resource type="Script" path="res://main.gd" id="1_g2hj1"]
@@ -47,6 +47,7 @@
 [ext_resource type="AudioStream" uid="uid://bawro0bxynsxp" path="res://sound and music/arm/stretch1.mp3" id="40_pogyd"]
 [ext_resource type="AudioStream" uid="uid://rpxdas5x7i5" path="res://sound and music/arm/stretch2.mp3" id="41_7q1r3"]
 [ext_resource type="AudioStream" uid="uid://1lxj0lgjr06h" path="res://sound and music/arm/stretch3.mp3" id="42_c73iq"]
+[ext_resource type="AudioStream" uid="uid://c4leiwwc816yl" path="res://sound and music/ticking.mp3" id="48_4246v"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mw1fs"]
 streams_count = 6
@@ -530,14 +531,18 @@ volume_db = -21.081
 autoplay = true
 script = ExtResource("8_ob2dm")
 
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(1700, 1082)
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 38.0
 one_shot = true
 autostart = true
 script = ExtResource("8_exfkf")
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(1700, 1082)
+[node name="Ticking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("48_4246v")
+volume_db = -20.0
 
 [connection signal="body_entered" from="Items/Remote/Area2D" to="Items/Remote" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Remote/Area2D" to="Items/Remote" method="_on_area_2d_body_exited"]

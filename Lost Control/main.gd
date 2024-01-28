@@ -3,12 +3,21 @@ extends Node2D
 @onready var timer = $Timer
 @onready var items = $Items
 @onready var itemSounds = $ItemSounds
+@onready var ticking = $Ticking
 
 var is_win = false
 
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
+func _process(_delta):
+	var time = timer.time_left
+	var seconds = int(fposmod(time, 60.0))
+	if (seconds < 7):
+		if !ticking.is_playing():
+			ticking.play()
 
 
 func _input(event):

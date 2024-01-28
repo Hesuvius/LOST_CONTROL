@@ -28,11 +28,11 @@ func update_position(relative_movement):
 	var bottom_right = viewport_rect.end
 
 	var radius = collision_shape.shape.radius
-	var scale = collision_shape.scale.x
+	var shape_scale = collision_shape.scale.x
 	
-	var min = (radius * scale) / 2
-	var max_x = bottom_right.x - (radius * scale)
-	var max_y = bottom_right.y - (radius * scale)
+	var min = (radius * shape_scale) / 2
+	var max_x = bottom_right.x - (radius * shape_scale)
+	var max_y = bottom_right.y - (radius * shape_scale)
 
 	var old_x = position.x
 	var old_y = position.y

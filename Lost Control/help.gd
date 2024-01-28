@@ -5,7 +5,7 @@ var text_template = "[center]Where is the remote? I have only %s seconds until m
 var win_text = "[center]I found it![/center]"
 
 
-func _process(delta):
+func _process(_delta):
 	if (get_parent().get_parent().is_win):
 		text = win_text
 	else:

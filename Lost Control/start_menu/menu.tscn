@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cuvvrlxqe2rje"]
+[gd_scene load_steps=8 format=3 uid="uid://cuvvrlxqe2rje"]
 
 [ext_resource type="Script" path="res://start_menu/menu.gd" id="1_tcir3"]
 [ext_resource type="Texture2D" uid="uid://c8urkiwbw8qs0" path="res://graphics/aloitusruutu.png" id="2_d4qum"]
 [ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="3_oagbh"]
 [ext_resource type="Texture2D" uid="uid://1fmyhh45n511" path="res://graphics/placeholders/godot_test2.jpg" id="4_elq01"]
 [ext_resource type="Texture2D" uid="uid://buchx5vibpgot" path="res://graphics/placeholders/godot_test3.jpg" id="5_h08ah"]
+[ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="6_xfg26"]
 
 [sub_resource type="Theme" id="Theme_y0f10"]
 
@@ -26,6 +27,7 @@ offset_top = 295.0
 offset_right = 341.0
 offset_bottom = 362.0
 tooltip_text = "Bye"
+theme_override_fonts/font = ExtResource("6_xfg26")
 theme_override_font_sizes/font_size = 40
 text = "exit"
 
@@ -35,6 +37,7 @@ offset_top = 211.0
 offset_right = 344.0
 offset_bottom = 278.0
 tooltip_text = "Click this to start the game"
+theme_override_fonts/font = ExtResource("6_xfg26")
 theme_override_font_sizes/font_size = 40
 text = "start"
 
@@ -95,8 +98,11 @@ offset_top = 733.0
 offset_right = 1613.0
 offset_bottom = 897.0
 rotation = 0.14084
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+scale = Vector2(1.7, 1.7)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
+theme_override_fonts/normal_font = ExtResource("6_xfg26")
 theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
 text = "LOST CONTROL"

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dv665noqvo3un"
+path="res://.godot/imported/klank.mp3-125913e77925029f11ede7382020af8a.mp3str"
+
+[deps]
+
+source_file="res://sound and music/trash_sounds/klank.mp3"
+dest_files=["res://.godot/imported/klank.mp3-125913e77925029f11ede7382020af8a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

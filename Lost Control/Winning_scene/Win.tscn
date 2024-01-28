@@ -20,7 +20,7 @@ theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
 theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
-text = "You found the controller and you didn't miss your favourite show! :)"
+text = "You found the remote and didn't miss your favourite show! :)"
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_shaoi")

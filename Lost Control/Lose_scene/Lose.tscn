@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkqyrqcq5wpgs"]
+[gd_scene load_steps=5 format=3 uid="uid://dkqyrqcq5wpgs"]
 
 [ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="1_7qebn"]
 [ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="1_f46ax"]
 [ext_resource type="Script" path="res://Lose_scene/Back to menu button.gd" id="2_metpv"]
+[ext_resource type="Texture2D" uid="uid://2xkphw8mbvkb" path="res://graphics/loss.png" id="4_m46gh"]
 
 [node name="Lose" type="Node2D"]
 
@@ -48,5 +49,10 @@ theme_override_fonts/font = ExtResource("1_7qebn")
 theme_override_font_sizes/font_size = 37
 text = "Try again.."
 script = ExtResource("2_metpv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -15
+position = Vector2(959, 540)
+texture = ExtResource("4_m46gh")
 
 [connection signal="pressed" from="Back to menu button" to="Back to menu button" method="_on_pressed"]

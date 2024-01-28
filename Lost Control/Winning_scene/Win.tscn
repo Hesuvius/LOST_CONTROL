@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bj8dakdkh3eln"]
+[gd_scene load_steps=9 format=3 uid="uid://bj8dakdkh3eln"]
 
 [ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="1_ngjl6"]
 [ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="1_shaoi"]
+[ext_resource type="Texture2D" uid="uid://c7yc5p5675ioa" path="res://graphics/voittoruutu.png" id="2_6e542"]
 [ext_resource type="Texture2D" uid="uid://b6o1c6ab0crpu" path="res://graphics/win_arm.png" id="3_8ph4t"]
 [ext_resource type="Script" path="res://Lose_scene/Back to menu button.gd" id="4_1x4m3"]
 [ext_resource type="Texture2D" uid="uid://cx1secpxn3keu" path="res://graphics/win_effect.png" id="5_c222b"]
@@ -10,41 +11,34 @@
 
 [node name="Win" type="Node2D"]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-texture_repeat = 2
-offset_left = 365.0
-offset_top = 826.0
-offset_right = 1246.0
-offset_bottom = 1315.0
-rotation = -0.164061
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
-theme_override_fonts/normal_font = ExtResource("1_ngjl6")
-theme_override_font_sizes/normal_font_size = 60
-bbcode_enabled = true
-text = "You found the remote and didn't miss your favourite show! :)"
-
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_shaoi")
 volume_db = -20.0
 pitch_scale = 1.5
 autoplay = true
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960.222, 541)
+scale = Vector2(0.998148, 0.998148)
+texture = ExtResource("2_6e542")
+
 [node name="WinArm" type="Sprite2D" parent="."]
 z_index = 6
-position = Vector2(1605, 666)
+position = Vector2(1271, 991)
 rotation = -0.287979
 scale = Vector2(2.82207, 2.82207)
 texture = ExtResource("3_8ph4t")
 
 [node name="Salora" type="Sprite2D" parent="."]
+visible = false
 z_index = -1
 position = Vector2(593, 390)
 scale = Vector2(1.75949, 1.75949)
 texture = ExtResource("5_r1l01")
 
 [node name="WinEffect" type="Sprite2D" parent="."]
-position = Vector2(1453, 301)
+position = Vector2(1113, 653)
+scale = Vector2(1.0464, 1.0464)
 texture = ExtResource("5_c222b")
 script = ExtResource("5_f6mud")
 
@@ -66,5 +60,19 @@ theme_override_fonts/font = ExtResource("1_ngjl6")
 theme_override_font_sizes/font_size = 37
 text = "Back to menu !"
 script = ExtResource("4_1x4m3")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_repeat = 2
+offset_left = 928.0
+offset_top = 180.0
+offset_right = 1951.0
+offset_bottom = 700.0
+rotation = -0.164061
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
+theme_override_fonts/normal_font = ExtResource("1_ngjl6")
+theme_override_font_sizes/normal_font_size = 47
+bbcode_enabled = true
+text = "You found the remote and didn't miss your favourite show! :)"
 
 [connection signal="pressed" from="Back to menu button" to="Back to menu button" method="_on_pressed"]

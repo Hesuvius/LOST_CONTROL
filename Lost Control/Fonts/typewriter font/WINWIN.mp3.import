@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dm7pqwq1a84tt"
+path="res://.godot/imported/WINWIN.mp3-458b92e9644e7d199797a6614dac8bd7.mp3str"
+
+[deps]
+
+source_file="res://Fonts/typewriter font/WINWIN.mp3"
+dest_files=["res://.godot/imported/WINWIN.mp3-458b92e9644e7d199797a6614dac8bd7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

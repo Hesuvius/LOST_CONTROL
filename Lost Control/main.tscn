@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cae4ax4c544ox"]
+[gd_scene load_steps=51 format=3 uid="uid://cae4ax4c544ox"]
 
 [ext_resource type="Script" path="res://item.gd" id="1_cqr2q"]
 [ext_resource type="Script" path="res://main.gd" id="1_g2hj1"]
@@ -42,8 +42,8 @@
 [ext_resource type="Texture2D" uid="uid://cymota14uso2" path="res://graphics/roskaa/bansku.png" id="26_qdr7x"]
 [ext_resource type="Texture2D" uid="uid://cn7165vvh000k" path="res://graphics/roskaa/kirje.png" id="27_i3ibl"]
 [ext_resource type="Texture2D" uid="uid://b0tk45sc7ilp7" path="res://graphics/roskaa/papers.png" id="28_t7km5"]
-[ext_resource type="Texture2D" uid="uid://cwqjbrwfpiadd" path="res://graphics/roskaa/nessu.png" id="36_0bo41"]
 [ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="33_hrx1w"]
+[ext_resource type="Texture2D" uid="uid://cwqjbrwfpiadd" path="res://graphics/roskaa/nessu.png" id="36_0bo41"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mw1fs"]
 streams_count = 6

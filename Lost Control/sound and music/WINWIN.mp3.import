@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlhsytohnohih"
+path="res://.godot/imported/WINWIN.mp3-afb8f9184eed27206461689aaf460fbf.mp3str"
+
+[deps]
+
+source_file="res://sound and music/WINWIN.mp3"
+dest_files=["res://.godot/imported/WINWIN.mp3-afb8f9184eed27206461689aaf460fbf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

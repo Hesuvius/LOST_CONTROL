@@ -18,24 +18,22 @@ func show_next_slider(slidesmax):
 			storySlidesList[slidecount-1].set_visible(false)
 		storySlidesList[slidecount].set_visible(true)
 		slidecount = slidecount + 1
-		print(slidecount,slidesmax)
 	if slidecount == slidesmax:
 		# turns out gd script doesn't have try-catch
 		go_to_main_game()
 
 func _on_exit_btn_pressed():
-	print("exit")
 	get_tree().quit()
 
 func _on_start_btn_pressed():
 	$main_menu_graphics/buttons/start_btn.set_visible(false)
 	$main_menu_graphics/buttons/next_btn.set_visible(true)
-	show_next_slider(4)
+	show_next_slider(3)
 	#slide_timer.start(5)
 
 func _on_next_btn_pressed():
-	# number here is the amount of slides
-	show_next_slider(4)
+	print("pressed")
+	show_next_slider(3)
 
 func _on_slide_timer_timeout():
 	go_to_main_game()

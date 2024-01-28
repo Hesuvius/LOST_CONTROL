@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://start_menu/menu.gd" id="1_tcir3"]
 [ext_resource type="Texture2D" uid="uid://c8urkiwbw8qs0" path="res://graphics/aloitusruutu.png" id="2_d4qum"]
 [ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="3_oagbh"]
-[ext_resource type="Texture2D" uid="uid://1fmyhh45n511" path="res://graphics/placeholders/godot_test2.jpg" id="4_elq01"]
-[ext_resource type="Texture2D" uid="uid://buchx5vibpgot" path="res://graphics/placeholders/godot_test3.jpg" id="5_h08ah"]
+[ext_resource type="Texture2D" uid="uid://mkghlxo7qkp4" path="res://graphics/aloitusruutu_2.png" id="4_tge66"]
+[ext_resource type="Texture2D" uid="uid://bakflhfkuw6be" path="res://graphics/aloitusruutu_3.png" id="5_kakeq"]
 [ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="6_xfg26"]
 
 [sub_resource type="Theme" id="Theme_y0f10"]
@@ -42,7 +42,6 @@ theme_override_font_sizes/font_size = 40
 text = "start"
 
 [node name="next_btn" type="Button" parent="main_menu_graphics/buttons"]
-visible = false
 z_index = 5
 offset_left = 675.0
 offset_top = 876.0
@@ -58,30 +57,22 @@ text = "next"
 [node name="story1" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
 visible = false
 z_index = 3
-position = Vector2(832.287, 393.7)
-scale = Vector2(1.98866, 1.99337)
-texture = ExtResource("2_d4qum")
+position = Vector2(961.085, 544.79)
+scale = Vector2(1.00541, 1.0078)
+texture = ExtResource("4_tge66")
 
 [node name="story2" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
 visible = false
 z_index = 3
-position = Vector2(1126, 486)
-scale = Vector2(2.42875, 2.10917)
-texture = ExtResource("4_elq01")
-
-[node name="story3" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
-visible = false
-z_index = 3
-position = Vector2(737.25, 497.375)
-scale = Vector2(1.92937, 1.86792)
-texture = ExtResource("5_h08ah")
+position = Vector2(954, 545.524)
+texture = ExtResource("5_kakeq")
 
 [node name="safety_filler" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
 visible = false
 z_index = 3
-position = Vector2(737.25, 497.375)
-scale = Vector2(1.92937, 1.86792)
-texture = ExtResource("5_h08ah")
+position = Vector2(1064.21, 578.162)
+scale = Vector2(1.11293, 1.07748)
+texture = ExtResource("5_kakeq")
 
 [node name="win_slides" type="Node2D" parent="."]
 

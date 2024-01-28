@@ -1,8 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bj8dakdkh3eln"]
 
 [ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="1_ngjl6"]
-[ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="1_shaoi"]
-[ext_resource type="Texture2D" uid="uid://c7yc5p5675ioa" path="res://graphics/voittoruutu.png" id="2_6e542"]
+[ext_resource type="AudioStream" uid="uid://dlhsytohnohih" path="res://sound and music/WINWIN.mp3" id="2_70ecm"]
 [ext_resource type="Texture2D" uid="uid://b6o1c6ab0crpu" path="res://graphics/win_arm.png" id="3_8ph4t"]
 [ext_resource type="Script" path="res://Lose_scene/Back to menu button.gd" id="4_1x4m3"]
 [ext_resource type="Texture2D" uid="uid://cx1secpxn3keu" path="res://graphics/win_effect.png" id="5_c222b"]
@@ -12,9 +11,8 @@
 [node name="Win" type="Node2D"]
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_shaoi")
+stream = ExtResource("2_70ecm")
 volume_db = -20.0
-pitch_scale = 1.5
 autoplay = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

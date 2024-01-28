@@ -68,3 +68,5 @@ func select_top_item():
 		if item.touching and item.z_index > highest_z_index:
 			highest_z_index = item.z_index
 			selected = item
+	if (selected):
+		get_parent().itemSounds.play()

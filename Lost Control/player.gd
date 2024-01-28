@@ -4,6 +4,9 @@ extends CharacterBody2D
 @onready var upperArm = $UpperArm
 @onready var openHand = $OpenHand
 @onready var closedHand = $ClosedHand
+@onready var stretchSound = $StretchSound
+
+var shouldPlayStretch = true
 
 
 func _input(event):
@@ -44,3 +47,14 @@ func update_position(relative_movement):
 
 	var old_point = upperArm.points[0]
 	upperArm.points[0] = Vector2(old_point.x + x_change, old_point.y + y_change)
+
+
+	if position.y < 200 || position.x < 650 || position.x > 1700:
+		shouldPlayStretch = true
+	else:
+		shouldPlayStretch = false
+	
+	if shouldPlayStretch && !stretchSound.playing:
+		stretchSound.play()
+		shouldPlayStretch = false
+

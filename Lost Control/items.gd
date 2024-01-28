@@ -2,11 +2,20 @@ extends Node
 
 var items = []
 var selected = null
+var rng = RandomNumberGenerator.new()
 
 
 func _ready():
-	items = get_children()
-	items.reverse()
+	var raw_items = get_children()
+	raw_items.reverse()
+	
+	# vois ehkä generoida tästä poolista monta samaa
+	#var remote = get_children().filter(func(item: Sprite2D): return item.is_remote)[0]
+	#var non_remote_items = get_children().filter(func(item: Sprite2D): return !item.is_remote)
+	#items.append(remote.duplicate())
+	
+	items = raw_items
+	randomize_transforms()
 	update_z_indices(null)
 	pass
 
@@ -22,6 +31,12 @@ func _input(event):
 						get_parent().win()
 			else:
 				selected = null
+
+func randomize_transforms():
+	for item in items:
+		item.position.x = rng.randi_range(270, 1695)
+		item.position.y = rng.randi_range(245, 900)
+		item.rotation = rng.randi_range(0, 360)
 
 
 func move_selected_item(movement: Vector2):

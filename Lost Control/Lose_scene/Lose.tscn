@@ -1,20 +1,25 @@
 [gd_scene load_steps=5 format=3 uid="uid://dkqyrqcq5wpgs"]
 
 [ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="1_7qebn"]
+[ext_resource type="Texture2D" uid="uid://2xkphw8mbvkb" path="res://graphics/loss.png" id="1_cs1f0"]
 [ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="1_f46ax"]
 [ext_resource type="Script" path="res://Lose_scene/Back to menu button.gd" id="2_metpv"]
-[ext_resource type="Texture2D" uid="uid://2xkphw8mbvkb" path="res://graphics/loss.png" id="4_m46gh"]
 
 [node name="Lose" type="Node2D"]
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(959.5, 541.5)
+scale = Vector2(1.00156, 1.00833)
+texture = ExtResource("1_cs1f0")
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 texture_repeat = 2
-offset_left = 664.0
-offset_top = 451.0
-offset_right = 1474.0
-offset_bottom = 917.0
+offset_left = 1156.0
+offset_top = 47.0
+offset_right = 1966.0
+offset_bottom = 513.0
 rotation = 0.0236144
-theme_override_colors/default_color = Color(0, 0.286275, 0.541176, 1)
+theme_override_colors/default_color = Color(0.6, 0.592157, 0.607843, 1)
 theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
 theme_override_fonts/normal_font = ExtResource("1_7qebn")
 theme_override_font_sizes/normal_font_size = 60
@@ -38,7 +43,7 @@ emission_shape = 3
 emission_rect_extents = Vector2(800, 1)
 gravity = Vector2(2.08165e-12, 849.92)
 scale_amount_max = 19.3
-color = Color(0, 0.117647, 0.643137, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="Back to menu button" type="Button" parent="."]
 offset_left = 1504.0
@@ -47,12 +52,7 @@ offset_right = 1853.0
 offset_bottom = 1029.0
 theme_override_fonts/font = ExtResource("1_7qebn")
 theme_override_font_sizes/font_size = 37
-text = "Try again..."
+text = "Try again.."
 script = ExtResource("2_metpv")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -15
-position = Vector2(959, 540)
-texture = ExtResource("4_m46gh")
 
 [connection signal="pressed" from="Back to menu button" to="Back to menu button" method="_on_pressed"]

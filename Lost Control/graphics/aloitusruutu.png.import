@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpblub2l3rg00"
-path="res://.godot/imported/gigachad.jpeg-7f18926764c46bda0b82609dfd5c61cb.ctex"
+uid="uid://c8urkiwbw8qs0"
+path="res://.godot/imported/aloitusruutu.png-0dd06242ba2a038e832d4c4fa58292c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Lose_scene/gigachad.jpeg"
-dest_files=["res://.godot/imported/gigachad.jpeg-7f18926764c46bda0b82609dfd5c61cb.ctex"]
+source_file="res://graphics/aloitusruutu.png"
+dest_files=["res://.godot/imported/aloitusruutu.png-0dd06242ba2a038e832d4c4fa58292c1.ctex"]
 
 [params]
 

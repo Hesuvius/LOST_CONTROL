@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://cae4ax4c544ox"]
+[gd_scene load_steps=55 format=3 uid="uid://cae4ax4c544ox"]
 
 [ext_resource type="Script" path="res://item.gd" id="1_cqr2q"]
 [ext_resource type="Script" path="res://main.gd" id="1_g2hj1"]
@@ -44,6 +44,9 @@
 [ext_resource type="Texture2D" uid="uid://b0tk45sc7ilp7" path="res://graphics/roskaa/papers.png" id="28_t7km5"]
 [ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="33_hrx1w"]
 [ext_resource type="Texture2D" uid="uid://cwqjbrwfpiadd" path="res://graphics/roskaa/nessu.png" id="36_0bo41"]
+[ext_resource type="AudioStream" uid="uid://bawro0bxynsxp" path="res://sound and music/arm/stretch1.mp3" id="40_pogyd"]
+[ext_resource type="AudioStream" uid="uid://rpxdas5x7i5" path="res://sound and music/arm/stretch2.mp3" id="41_7q1r3"]
+[ext_resource type="AudioStream" uid="uid://1lxj0lgjr06h" path="res://sound and music/arm/stretch3.mp3" id="42_c73iq"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mw1fs"]
 streams_count = 6
@@ -68,6 +71,15 @@ size = Vector2(9.69529, 19.2521)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_socay"]
 radius = 69.26
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l4wtt"]
+streams_count = 3
+stream_0/stream = ExtResource("40_pogyd")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("41_7q1r3")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("42_c73iq")
+stream_2/weight = 1.0
 
 [sub_resource type="Gradient" id="Gradient_glqio"]
 offsets = PackedFloat32Array(0.968912, 1)
@@ -461,7 +473,7 @@ position = Vector2(992, 615)
 script = ExtResource("4_r86g5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-30, -10)
+position = Vector2(-20.36, -19.61)
 shape = SubResource("CircleShape2D_socay")
 metadata/_edit_lock_ = true
 
@@ -486,6 +498,10 @@ rotation = -0.785398
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("11_x8hco")
 metadata/_edit_lock_ = true
+
+[node name="StretchSound" type="AudioStreamPlayer" parent="Player"]
+stream = SubResource("AudioStreamRandomizer_l4wtt")
+volume_db = -15.0
 
 [node name="HUD" type="Node2D" parent="."]
 z_index = 1000
@@ -519,6 +535,9 @@ wait_time = 38.0
 one_shot = true
 autostart = true
 script = ExtResource("8_exfkf")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(1700, 1082)
 
 [connection signal="body_entered" from="Items/Remote/Area2D" to="Items/Remote" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Remote/Area2D" to="Items/Remote" method="_on_area_2d_body_exited"]

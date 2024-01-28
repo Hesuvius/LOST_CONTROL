@@ -407,7 +407,7 @@ polygon = PackedVector2Array(-11.5, -51.6, -11.5, -48.7, 5.5, -26, 29, -37, 34.5
 metadata/_edit_lock_ = true
 
 [node name="Player" type="CharacterBody2D" parent="."]
-z_index = 100
+z_index = 500
 position = Vector2(992, 615)
 script = ExtResource("4_r86g5")
 
@@ -439,7 +439,7 @@ texture = ExtResource("11_x8hco")
 metadata/_edit_lock_ = true
 
 [node name="HUD" type="Node2D" parent="."]
-z_index = 100
+z_index = 1000
 metadata/_edit_lock_ = true
 
 [node name="Help" type="RichTextLabel" parent="HUD"]

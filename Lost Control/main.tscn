@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cae4ax4c544ox"]
+[gd_scene load_steps=43 format=3 uid="uid://cae4ax4c544ox"]
 
 [ext_resource type="Script" path="res://item.gd" id="1_cqr2q"]
 [ext_resource type="Script" path="res://main.gd" id="1_g2hj1"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://cymota14uso2" path="res://graphics/roskaa/bansku.png" id="26_qdr7x"]
 [ext_resource type="Texture2D" uid="uid://cn7165vvh000k" path="res://graphics/roskaa/kirje.png" id="27_i3ibl"]
 [ext_resource type="Texture2D" uid="uid://b0tk45sc7ilp7" path="res://graphics/roskaa/papers.png" id="28_t7km5"]
+[ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="33_hrx1w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vo865"]
 size = Vector2(72, 224)
@@ -45,6 +46,13 @@ size = Vector2(9.69529, 19.2521)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_socay"]
 radius = 69.26
+
+[sub_resource type="Gradient" id="Gradient_glqio"]
+offsets = PackedFloat32Array(0.968912, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yh4c7"]
+gradient = SubResource("Gradient_glqio")
+fill_to = Vector2(0, 1)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_g2hj1")
@@ -442,12 +450,18 @@ metadata/_edit_lock_ = true
 z_index = 1000
 metadata/_edit_lock_ = true
 
+[node name="Sprite2D" type="Sprite2D" parent="HUD"]
+position = Vector2(1673.75, 1045.75)
+scale = Vector2(7.91406, 3.44531)
+texture = SubResource("GradientTexture2D_yh4c7")
+
 [node name="Help" type="RichTextLabel" parent="HUD"]
-offset_left = 75.0
-offset_top = 931.0
-offset_right = 731.0
-offset_bottom = 1024.0
-theme_override_font_sizes/normal_font_size = 32
+offset_left = 1442.0
+offset_top = 958.0
+offset_right = 1897.0
+offset_bottom = 1054.0
+theme_override_fonts/normal_font = ExtResource("33_hrx1w")
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[center]Where is the remote? I have 38 seconds until my favorite TV show starts![/center]"
 fit_content = true

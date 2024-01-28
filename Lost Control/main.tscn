@@ -181,21 +181,6 @@ metadata/_edit_lock_ = true
 polygon = PackedVector2Array(14, -135.2, 14, 138, -14, 138, -14, -136.5, -12, -138, 12, -138)
 metadata/_edit_lock_ = true
 
-[node name="Tollo2" type="Sprite2D" parent="Items"]
-z_as_relative = false
-position = Vector2(335, 704)
-rotation = -1.2706
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_lbv7d")
-script = ExtResource("1_cqr2q")
-
-[node name="Area2D" type="Area2D" parent="Items/Tollo2"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Tollo2/Area2D"]
-polygon = PackedVector2Array(34, -139.9, 34, -137.6, 35.1, -136, 50, -136, 50, -133, 51.5, -128, 52.8, -128, 60, -120.8, 60, -116, 69.2, -116, 71.2, -112, 89.2, -112, 91.2, -108, 100.7, -108, 110.7, -100, 118, -100, 118, -97.5, 121, -90, 117.7, -90, 116, -88.9, 116, -82, 113.8, -82, 104, -73.1, 104, -67.4, 103, -66, 110.7, -60, 112.8, -60, 114.8, -64, 134, -64, 134, -61.9, 144, -52.9, 144, -18, 141.7, -18, 140, -16.9, 140, 2, 137.7, 2, 136, 3.10001, 136, 22, 133.7, 22, 132, 23.1, 132, 66, 129.7, 66, 124, 70.9, 124, 77, 116, 83, 116, 89.2, 112, 91.2, 112, 106, 109.9, 106, 100.9, 116, 94.7, 116, 84.7, 124, 80, 124, 80, 124.8, 76.8, 128, 72, 128, 72, 128.8, 64.8, 136, 60, 136, 60, 136.8, 56.8, 140, -26, 140, -26, 137.7, -30.9, 132, -37.2, 132, -39.2, 128, -46, 128, -46, 125.9, -52, 120.9, -52, 116, -56.8, 116, -58.8, 120, -74, 120, -74, 117.7, -75.1, 116, -90, 116, -90, 113.7, -91.1, 112, -98, 112, -98, 109.9, -110.9, 96, -134, 96, -134, 93.9, -140, 88.9, -140, 75.2, -144, 73.2, -144, 58.3, -144, 44, -140, 44, -140, -10, -137.6, -10, -136, -11.1, -136, -22, -133.6, -22, -132, -23.1, -132, -37.2, -128, -39.2, -128, -46, -125.7, -46, -116, -54.9, -116, -62, -113.7, -62, -108, -66.9, -108, -73.2, -104, -75.2, -104, -85.2, -100, -87.2, -100, -97.2, -96, -99.2, -96, -106, -93.9, -106, -84.9, -116, -59.2, -116, -57.2, -120, -52, -120, -52, -129.2, -48, -131.2, -48, -136.8, -44.8, -140, -12, -140, 31.9, -140)
-metadata/_edit_lock_ = true
-
 [node name="Kortti" type="Sprite2D" parent="Items"]
 z_as_relative = false
 position = Vector2(456, 767)
@@ -268,21 +253,6 @@ script = ExtResource("1_cqr2q")
 metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Kokis/Area2D"]
-polygon = PackedVector2Array(-22, -60.7, -22, -58.8, -16.2, -53, -13.5, -53, 23.5, -31, 26.1, -31, 31.1, -37, 36.5, -37, 57.5, -47, 66.5, -47, 72, -44.2, 72, -42.9, 88, -27.9, 88, -24.5, 98, -7.5, 98, -2.5, 100, 1, 100, 42.7, 97.5, 51, 95.9, 51, 90.9, 57, 87.7, 57, 77.3, 65, 56.1, 65, 10, 56.7, 10, 55.5, -60, 34.5, -60, 33.3, -84, 22.3, -84, 20.9, -92, 13.9, -92, 8.6, -100, -3.4, -100, -31.4, -99.8, -33, -98.2, -33, -89.2, -51, -87.9, -51, -78.9, -61, -75.6, -61, -70, -65, -44.4, -65)
-metadata/_edit_lock_ = true
-
-[node name="Kokis2" type="Sprite2D" parent="Items"]
-z_as_relative = false
-position = Vector2(379, 795)
-rotation = -1.07687
-scale = Vector2(0.82, 0.82)
-texture = ExtResource("18_2ld36")
-script = ExtResource("1_cqr2q")
-
-[node name="Area2D" type="Area2D" parent="Items/Kokis2"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/Kokis2/Area2D"]
 polygon = PackedVector2Array(-22, -60.7, -22, -58.8, -16.2, -53, -13.5, -53, 23.5, -31, 26.1, -31, 31.1, -37, 36.5, -37, 57.5, -47, 66.5, -47, 72, -44.2, 72, -42.9, 88, -27.9, 88, -24.5, 98, -7.5, 98, -2.5, 100, 1, 100, 42.7, 97.5, 51, 95.9, 51, 90.9, 57, 87.7, 57, 77.3, 65, 56.1, 65, 10, 56.7, 10, 55.5, -60, 34.5, -60, 33.3, -84, 22.3, -84, 20.9, -92, 13.9, -92, 8.6, -100, -3.4, -100, -31.4, -99.8, -33, -98.2, -33, -89.2, -51, -87.9, -51, -78.9, -61, -75.6, -61, -70, -65, -44.4, -65)
 metadata/_edit_lock_ = true
 
@@ -470,6 +440,7 @@ metadata/_edit_lock_ = true
 
 [node name="HUD" type="Node2D" parent="."]
 z_index = 100
+metadata/_edit_lock_ = true
 
 [node name="Help" type="RichTextLabel" parent="HUD"]
 offset_left = 75.0
@@ -510,8 +481,6 @@ script = ExtResource("8_exfkf")
 [connection signal="body_exited" from="Items/Rööki2/Area2D" to="Items/Rööki2" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Rööki3/Area2D" to="Items/Rööki3" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Rööki3/Area2D" to="Items/Rööki3" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Items/Tollo2/Area2D" to="Items/Tollo2" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Items/Tollo2/Area2D" to="Items/Tollo2" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Kortti/Area2D" to="Items/Kortti" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Kortti/Area2D" to="Items/Kortti" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Motto/Area2D" to="Items/Motto" method="_on_area_2d_body_entered"]
@@ -522,8 +491,6 @@ script = ExtResource("8_exfkf")
 [connection signal="body_exited" from="Items/Pelikortti/Area2D" to="Items/Pelikortti" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Kokis/Area2D" to="Items/Kokis" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Kokis/Area2D" to="Items/Kokis" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Items/Kokis2/Area2D" to="Items/Kokis2" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Items/Kokis2/Area2D" to="Items/Kokis2" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Pizza/Area2D" to="Items/Pizza" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Items/Pizza/Area2D" to="Items/Pizza" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Items/Lippu/Area2D" to="Items/Lippu" method="_on_area_2d_body_entered"]

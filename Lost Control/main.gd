@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var timer = $Timer
 @onready var items = $Items
+@onready var itemSounds = $ItemSounds
 
 var is_win = false
 

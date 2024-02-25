@@ -2,18 +2,14 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://c8lxb4llolk4c"
-path="res://.godot/imported/pong.mp3-7ece7f46d57c647275c3f1cfe1662755.mp3str"
+path="res://.import/pong.mp3-7ece7f46d57c647275c3f1cfe1662755.mp3str"
 
 [deps]
 
 source_file="res://sound and music/trash_sounds/pong.mp3"
-dest_files=["res://.godot/imported/pong.mp3-7ece7f46d57c647275c3f1cfe1662755.mp3str"]
+dest_files=[ "res://.import/pong.mp3-7ece7f46d57c647275c3f1cfe1662755.mp3str" ]
 
 [params]
 
 loop=false
 loop_offset=0
-bpm=0
-beat_count=0
-bar_beats=4

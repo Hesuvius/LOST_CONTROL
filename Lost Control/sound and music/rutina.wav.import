@@ -1,14 +1,13 @@
 [remap]
 
 importer="wav"
-type="AudioStreamWAV"
-uid="uid://co3lwmwm252a7"
-path="res://.godot/imported/rutina.wav-8c12b801ee86de80d094353267bf7ba8.sample"
+type="AudioStreamSample"
+path="res://.import/rutina.wav-8c12b801ee86de80d094353267bf7ba8.sample"
 
 [deps]
 
 source_file="res://sound and music/rutina.wav"
-dest_files=["res://.godot/imported/rutina.wav-8c12b801ee86de80d094353267bf7ba8.sample"]
+dest_files=[ "res://.import/rutina.wav-8c12b801ee86de80d094353267bf7ba8.sample" ]
 
 [params]
 

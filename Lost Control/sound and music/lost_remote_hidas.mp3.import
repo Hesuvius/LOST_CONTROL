@@ -2,18 +2,14 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://cw5xmkax21d5"
-path="res://.godot/imported/lost_remote_hidas.mp3-a9e5ba85f709e1cac18f6bb86a6eca73.mp3str"
+path="res://.import/lost_remote_hidas.mp3-a9e5ba85f709e1cac18f6bb86a6eca73.mp3str"
 
 [deps]
 
 source_file="res://sound and music/lost_remote_hidas.mp3"
-dest_files=["res://.godot/imported/lost_remote_hidas.mp3-a9e5ba85f709e1cac18f6bb86a6eca73.mp3str"]
+dest_files=[ "res://.import/lost_remote_hidas.mp3-a9e5ba85f709e1cac18f6bb86a6eca73.mp3str" ]
 
 [params]
 
 loop=false
 loop_offset=0
-bpm=0
-beat_count=0
-bar_beats=4

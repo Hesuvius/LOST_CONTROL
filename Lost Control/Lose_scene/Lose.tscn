@@ -1,58 +1,73 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkqyrqcq5wpgs"]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="1_7qebn"]
-[ext_resource type="Texture2D" uid="uid://2xkphw8mbvkb" path="res://graphics/loss.png" id="1_cs1f0"]
-[ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="1_f46ax"]
-[ext_resource type="Script" path="res://Lose_scene/Back to menu button.gd" id="2_metpv"]
+[ext_resource path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://graphics/loss.png" type="Texture" id=2]
+[ext_resource path="res://sound and music/lost_remote_hidas_02.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Lose_scene/Back to menu button.gd" type="Script" id=4]
+[ext_resource path="res://button_normal.tres" type="StyleBox" id=5]
+[ext_resource path="res://button_pressed.tres" type="StyleBox" id=6]
+[ext_resource path="res://button_hover.tres" type="StyleBox" id=7]
+[ext_resource path="res://button_focus.tres" type="StyleBox" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 34
+font_data = ExtResource( 1 )
 
 [node name="Lose" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(959.5, 541.5)
-scale = Vector2(1.00156, 1.00833)
-texture = ExtResource("1_cs1f0")
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 959.5, 541.5 )
+scale = Vector2( 1.00156, 1.00833 )
+texture = ExtResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-texture_repeat = 2
-offset_left = 1156.0
-offset_top = 47.0
-offset_right = 1966.0
-offset_bottom = 513.0
-rotation = 0.0236144
-theme_override_colors/default_color = Color(0.6, 0.592157, 0.607843, 1)
-theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
-theme_override_fonts/normal_font = ExtResource("1_7qebn")
-theme_override_font_sizes/normal_font_size = 60
+margin_left = 1156.0
+margin_top = 47.0
+margin_right = 1966.0
+margin_bottom = 513.0
+rect_rotation = 1.35301
+custom_colors/default_color = Color( 0.6, 0.592157, 0.607843, 1 )
+custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 text = "You never found your remote and got depressed."
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_f46ax")
+stream = ExtResource( 3 )
 volume_db = -20.0
 pitch_scale = 0.44
 autoplay = true
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(1016, 1)
-scale = Vector2(1.24, 1)
+position = Vector2( 1016, 1 )
+scale = Vector2( 1.24, 1 )
 amount = 200
 lifetime = 5.49
 preprocess = 9.15
 explosiveness = 0.04
-emission_shape = 3
-emission_rect_extents = Vector2(800, 1)
-gravity = Vector2(2.08165e-12, 849.92)
-scale_amount_max = 19.3
-color = Color(0, 0, 0, 1)
+emission_shape = 2
+emission_rect_extents = Vector2( 800, 1 )
+direction = Vector2( 0, -1 )
+spread = 800.0
+gravity = Vector2( 0, 849.92 )
+scale_amount = 0.0
+scale_amount_random = 19.3
+color = Color( 0, 0, 0, 1 )
 
 [node name="Back to menu button" type="Button" parent="."]
-offset_left = 1504.0
-offset_top = 950.0
-offset_right = 1853.0
-offset_bottom = 1029.0
-theme_override_fonts/font = ExtResource("1_7qebn")
-theme_override_font_sizes/font_size = 37
+margin_left = 1504.0
+margin_top = 950.0
+margin_right = 1853.0
+margin_bottom = 1029.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 8 )
+custom_styles/normal = ExtResource( 5 )
 text = "Try again.."
-script = ExtResource("2_metpv")
+script = ExtResource( 4 )
 
 [connection signal="pressed" from="Back to menu button" to="Back to menu button" method="_on_pressed"]

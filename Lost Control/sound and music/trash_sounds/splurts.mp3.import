@@ -2,18 +2,14 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://cs7ssnk4ehkrd"
-path="res://.godot/imported/splurts.mp3-8d40e51db3fb4dd688d267aaac44b9bd.mp3str"
+path="res://.import/splurts.mp3-8d40e51db3fb4dd688d267aaac44b9bd.mp3str"
 
 [deps]
 
 source_file="res://sound and music/trash_sounds/splurts.mp3"
-dest_files=["res://.godot/imported/splurts.mp3-8d40e51db3fb4dd688d267aaac44b9bd.mp3str"]
+dest_files=[ "res://.import/splurts.mp3-8d40e51db3fb4dd688d267aaac44b9bd.mp3str" ]
 
 [params]
 
 loop=false
 loop_offset=0
-bpm=0
-beat_count=0
-bar_beats=4

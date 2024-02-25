@@ -1,110 +1,119 @@
-[gd_scene load_steps=8 format=3 uid="uid://cuvvrlxqe2rje"]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource type="Script" path="res://start_menu/menu.gd" id="1_tcir3"]
-[ext_resource type="Texture2D" uid="uid://c8urkiwbw8qs0" path="res://graphics/aloitusruutu.png" id="2_d4qum"]
-[ext_resource type="AudioStream" uid="uid://hw0d60di5860" path="res://sound and music/lost_remote_hidas_02.mp3" id="3_oagbh"]
-[ext_resource type="Texture2D" uid="uid://mkghlxo7qkp4" path="res://graphics/aloitusruutu_2.png" id="4_tge66"]
-[ext_resource type="Texture2D" uid="uid://bakflhfkuw6be" path="res://graphics/aloitusruutu_3.png" id="5_kakeq"]
-[ext_resource type="FontFile" uid="uid://h0v8h3l3cdpa" path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" id="6_xfg26"]
+[ext_resource path="res://start_menu/menu.gd" type="Script" id=1]
+[ext_resource path="res://graphics/aloitusruutu.png" type="Texture" id=2]
+[ext_resource path="res://sound and music/lost_remote_hidas_02.mp3" type="AudioStream" id=3]
+[ext_resource path="res://graphics/aloitusruutu_2.png" type="Texture" id=4]
+[ext_resource path="res://graphics/aloitusruutu_3.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/typewriter font/JMH Typewriter-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://button_pressed.tres" type="StyleBox" id=7]
+[ext_resource path="res://button_focus.tres" type="StyleBox" id=8]
+[ext_resource path="res://button_normal.tres" type="StyleBox" id=9]
+[ext_resource path="res://button_hover.tres" type="StyleBox" id=10]
 
-[sub_resource type="Theme" id="Theme_y0f10"]
+[sub_resource type="DynamicFont" id=1]
+size = 104
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 6 )
 
 [node name="Menu" type="Node2D"]
-script = ExtResource("1_tcir3")
+script = ExtResource( 1 )
 
 [node name="main_menu_graphics" type="Node2D" parent="."]
 
-[node name="TvDarkRoom" type="Sprite2D" parent="main_menu_graphics"]
-position = Vector2(958.69, 541.201)
-scale = Vector2(1.00223, 1.00222)
-texture = ExtResource("2_d4qum")
+[node name="TvDarkRoom" type="Sprite" parent="main_menu_graphics"]
+position = Vector2( 958.69, 541.201 )
+scale = Vector2( 1.00223, 1.00222 )
+texture = ExtResource( 2 )
 
-[node name="buttons" type="Node2D" parent="main_menu_graphics"]
-
-[node name="exit_btn" type="Button" parent="main_menu_graphics/buttons"]
-offset_left = 73.0
-offset_top = 295.0
-offset_right = 341.0
-offset_bottom = 362.0
-tooltip_text = "Bye"
-theme_override_fonts/font = ExtResource("6_xfg26")
-theme_override_font_sizes/font_size = 40
-text = "exit"
-
-[node name="start_btn" type="Button" parent="main_menu_graphics/buttons"]
-offset_left = 76.0
-offset_top = 211.0
-offset_right = 344.0
-offset_bottom = 278.0
-tooltip_text = "Click this to start the game"
-theme_override_fonts/font = ExtResource("6_xfg26")
-theme_override_font_sizes/font_size = 40
-text = "start"
-
-[node name="next_btn" type="Button" parent="main_menu_graphics/buttons"]
-visible = false
-z_index = 5
-offset_left = 675.0
-offset_top = 876.0
-offset_right = 943.0
-offset_bottom = 956.0
-theme = SubResource("Theme_y0f10")
-theme_override_fonts/font = ExtResource("6_xfg26")
-theme_override_font_sizes/font_size = 52
-text = "next"
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 999.0
+margin_top = 733.0
+margin_right = 2613.0
+margin_bottom = 1097.0
+rect_rotation = 8.06954
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 2
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+text = "LOST CONTROL"
 
 [node name="story_slides" type="Node2D" parent="."]
 
-[node name="story1" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
+[node name="story1" type="Sprite" parent="story_slides" groups=["story_slides_group"]]
 visible = false
-z_index = 3
-position = Vector2(961.085, 544.79)
-scale = Vector2(1.00541, 1.0078)
-texture = ExtResource("4_tge66")
+position = Vector2( 961.085, 544.79 )
+scale = Vector2( 1.00541, 1.0078 )
+texture = ExtResource( 4 )
 
-[node name="story2" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
+[node name="story2" type="Sprite" parent="story_slides" groups=["story_slides_group"]]
 visible = false
-z_index = 3
-position = Vector2(954, 545.524)
-texture = ExtResource("5_kakeq")
+position = Vector2( 954, 545.524 )
+texture = ExtResource( 5 )
 
-[node name="safety_filler" type="Sprite2D" parent="story_slides" groups=["story_slides_group"]]
+[node name="safety_filler" type="Sprite" parent="story_slides" groups=["story_slides_group"]]
 visible = false
-z_index = 3
-position = Vector2(1064.21, 578.162)
-scale = Vector2(1.11293, 1.07748)
-texture = ExtResource("5_kakeq")
+position = Vector2( 1064.21, 578.162 )
+scale = Vector2( 1.11293, 1.07748 )
+texture = ExtResource( 5 )
 
 [node name="win_slides" type="Node2D" parent="."]
 
 [node name="fail_slides" type="Node2D" parent="."]
 
+[node name="buttons" type="Node2D" parent="."]
+
+[node name="exit_btn" type="Button" parent="buttons"]
+margin_left = 73.0
+margin_top = 295.0
+margin_right = 341.0
+margin_bottom = 362.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 8 )
+custom_styles/normal = ExtResource( 9 )
+text = "exit"
+
+[node name="start_btn" type="Button" parent="buttons"]
+margin_left = 76.0
+margin_top = 211.0
+margin_right = 344.0
+margin_bottom = 278.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 8 )
+custom_styles/normal = ExtResource( 9 )
+text = "start"
+
+[node name="next_btn" type="Button" parent="buttons"]
+visible = false
+margin_left = 675.0
+margin_top = 876.0
+margin_right = 943.0
+margin_bottom = 956.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 8 )
+custom_styles/normal = ExtResource( 9 )
+text = "next"
+
 [node name="Background music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_oagbh")
+stream = ExtResource( 3 )
 volume_db = -19.27
 autoplay = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-texture_repeat = 2
-offset_left = 999.0
-offset_top = 733.0
-offset_right = 1613.0
-offset_bottom = 897.0
-rotation = 0.14084
-scale = Vector2(1.7, 1.7)
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.658824, 0, 0.643137, 1)
-theme_override_fonts/normal_font = ExtResource("6_xfg26")
-theme_override_font_sizes/normal_font_size = 60
-bbcode_enabled = true
-text = "LOST CONTROL"
 
 [node name="slide_timer" type="Timer" parent="."]
 wait_time = 8.0
 one_shot = true
 
-[connection signal="pressed" from="main_menu_graphics/buttons/exit_btn" to="." method="_on_exit_btn_pressed"]
-[connection signal="pressed" from="main_menu_graphics/buttons/start_btn" to="." method="_on_start_btn_pressed"]
-[connection signal="pressed" from="main_menu_graphics/buttons/next_btn" to="." method="_on_next_btn_pressed"]
+[connection signal="pressed" from="buttons/exit_btn" to="." method="_on_exit_btn_pressed"]
+[connection signal="pressed" from="buttons/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="buttons/next_btn" to="." method="_on_next_btn_pressed"]
 [connection signal="timeout" from="slide_timer" to="." method="_on_slide_timer_timeout"]
